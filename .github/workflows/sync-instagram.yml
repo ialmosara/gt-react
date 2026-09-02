@@ -1,0 +1,38 @@
+name: Sync Instagram photos
+
+on:
+  schedule:
+    # Every Monday at 6am UTC. Change the cron expression to adjust cadence —
+    # this doesn't need to be frequent; daily/weekly is plenty.
+    - cron: '0 6 * * 1'
+  workflow_dispatch: {} # lets you trigger a sync manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest photos from Instagram
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: node scripts/sync-instagram.mjs
+
+      - name: Commit updated photos, if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images/social src/data/socialPhotos.json
+          if git diff --cached --quiet; then
+            echo "No photo changes — nothing to commit."
+          else
+            git commit -m "chore: sync Instagram photos"
+            git push
+          fi

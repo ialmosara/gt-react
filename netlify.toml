@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# React Router client-side routes (e.g. /where-we-work/kenya) need to resolve
+# to index.html on a direct load/refresh, not 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
