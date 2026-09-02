@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
+import DonateButton from '../components/DonateButton.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 const program = [
@@ -71,9 +72,9 @@ export default function Gala() {
                 <li>Full evening program</li>
                 <li>Tax-deductible portion applies</li>
               </ul>
-              <a className="btn btn-gold" href="#tickets">
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-gold">
                 Buy Your Ticket
-              </a>
+              </DonateButton>
             </div>
             <div className="tier-card">
               <span className="tier-name">Bronze — Entertainment Sponsor</span>
@@ -82,9 +83,9 @@ export default function Gala() {
               <ul className="tier-perks">
                 <li>Continuous recognition among guests</li>
               </ul>
-              <a className="btn btn-outline" href="#tickets">
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
                 Become a Bronze Sponsor
-              </a>
+              </DonateButton>
             </div>
             <div className="tier-card">
               <span className="tier-name">Silver — Reception Hour Sponsor</span>
@@ -94,9 +95,9 @@ export default function Gala() {
                 <li>Name &amp; logo displayed at the event</li>
                 <li>Featured in the gala journal</li>
               </ul>
-              <a className="btn btn-outline" href="#tickets">
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
                 Become a Silver Sponsor
-              </a>
+              </DonateButton>
             </div>
             <div className="tier-card">
               <span className="tier-name">Gold — Gala Underwriter</span>
@@ -107,9 +108,9 @@ export default function Gala() {
                 <li>Acknowledged in all promotional materials</li>
                 <li>Five complimentary tickets included</li>
               </ul>
-              <Link className="btn btn-outline" to="/give#gala-sponsorship">
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
                 Become a Gold Sponsor
-              </Link>
+              </DonateButton>
             </div>
           </div>
 
@@ -234,12 +235,12 @@ export default function Gala() {
               <p>Individual tickets and sponsorships are available now.</p>
             </div>
             <div className="callout-actions">
-              <a className="btn btn-gold" href="#tickets">
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-gold">
                 Purchase Tickets
-              </a>
-              <Link className="btn btn-ghost" to="/give#gala-sponsorship">
+              </DonateButton>
+              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-ghost">
                 Become a Sponsor
-              </Link>
+              </DonateButton>
             </div>
           </div>
         </div>

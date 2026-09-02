@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
+import DonateButton from '../components/DonateButton.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 const ways = [
@@ -75,9 +76,9 @@ export default function Give() {
                 <li>Tax-deductible receipt emailed instantly</li>
                 <li>One-time or annual giving</li>
               </ul>
-              <a className="btn btn-outline" href="#donate">
+              <DonateButton campaign="donate" fallbackHref="#donate" className="btn btn-outline">
                 Give Once
-              </a>
+              </DonateButton>
             </div>
             <div className="tier-card featured">
               <span className="tier-badge">Founding Donors Circle</span>
@@ -94,9 +95,9 @@ export default function Give() {
                 <li>Recognized as a Founding Donor</li>
                 <li>Annual giving summary for tax season</li>
               </ul>
-              <a className="btn btn-gold" href="#donate">
+              <DonateButton campaign="donate" fallbackHref="#donate" className="btn btn-gold">
                 Give Monthly
-              </a>
+              </DonateButton>
             </div>
             <div className="tier-card">
               <span className="tier-name">Special Events</span>
@@ -130,9 +131,9 @@ export default function Give() {
                 Leader's college education — a contribution that can also be directed straight to the university to
                 offset tuition, room and board, or other resources.
               </p>
-              <a className="link-arrow" style={{ marginTop: 24 }} href="#sponsor-student">
+              <DonateButton campaign="donate" fallbackHref="#sponsor-student" className="link-arrow">
                 Sponsor a Student &rarr;
-              </a>
+              </DonateButton>
             </div>
           </div>
         </div>
@@ -212,8 +213,8 @@ export default function Give() {
             <p className="eyebrow on-dark">Gala Sponsorship</p>
             <h2 style={{ marginTop: 10 }}>Sponsor the Founder&rsquo;s Gala.</h2>
             <p className="lede">
-              Gold, Platinum, and Diamond sponsorship tiers include reserved tables, logo placement, stage
-              recognition, and year-round listing as a corporate partner.
+              Bronze, Silver, and Gold sponsorship tiers include event recognition, logo placement, and — at the
+              Gold level — five complimentary tickets and year-round acknowledgment in promotional materials.
             </p>
             <div className="gala-actions">
               <Link className="btn btn-gold" to="/gala#tickets">
