@@ -12,9 +12,9 @@
 // That makes this endpoint idempotent — re-subscribing an existing address
 // just updates their status to "subscribed" instead of erroring.
 
-const crypto = require('crypto');
+import crypto from 'node:crypto';
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
