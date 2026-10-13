@@ -15,6 +15,7 @@ import Impact from './pages/Impact.jsx';
 import NewsEvents from './pages/NewsEvents.jsx';
 import Gala from './pages/Gala.jsx';
 import Give from './pages/Give.jsx';
+import Recruitment from './pages/Recruitment.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/news" element={<NewsEvents />} />
           <Route path="/gala" element={<Gala />} />
           <Route path="/give" element={<Give />} />
+          <Route path="/recruitment" element={<Recruitment />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

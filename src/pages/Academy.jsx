@@ -32,9 +32,14 @@ export default function Academy() {
                 and a community-service expectation — for as long as a student is in the program and often well
                 beyond graduation.
               </p>
-              <Link className="link-arrow" style={{ marginTop: 24 }} to="/give">
-                Sponsor a Student &rarr;
-              </Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px 28px', marginTop: 24 }}>
+                <Link className="link-arrow" to="/give">
+                  Sponsor a Student &rarr;
+                </Link>
+                <Link className="link-arrow" to="/recruitment">
+                  How students are selected &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>

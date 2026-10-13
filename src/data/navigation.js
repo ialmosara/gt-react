@@ -28,6 +28,7 @@ export const footerColumns = [
       { label: 'GT Foundation', to: '/ecosystem/foundation' },
       { label: 'GT Institute', to: '/ecosystem/institute' },
       { label: '360 Impact', to: '/impact#three-sixty' },
+      { label: 'Nominate a Student', to: '/recruitment' },
       { label: 'Where We Work', to: '/where-we-work' },
     ],
   },

@@ -36,6 +36,11 @@ export default function WhereWeWork() {
               </Link>
             ))}
           </div>
+          <div className="stories-foot">
+            <Link className="btn btn-outline" to="/recruitment">
+              Nominate a student &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
