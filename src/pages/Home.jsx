@@ -57,8 +57,7 @@ export default function Home() {
                   <div>
                     <h3>Our Mission</h3>
                     <p>
-                      Expand access to higher education and develop emerging leaders who create positive,
-                      sustainable change in their communities.
+                      Provide college education opportunities for underprivileged youth with leadership qualities living in the developing world, and support local community-based organizations with programs related to poverty reduction.
                     </p>
                   </div>
                 </div>
@@ -66,7 +65,7 @@ export default function Home() {
                   <span className="pillar-num">02</span>
                   <div>
                     <h3>Our Vision</h3>
-                    <p>A world where every passionate learner has the opportunity to reach their potential and transform their community.</p>
+                    <p>Build a network of change agents working to eradicate poverty around the world.</p>
                   </div>
                 </div>
                 <div className="pillar">

@@ -88,6 +88,19 @@ The homepage keeps its own teaser versions of Impact, Gala, and Give (per the bl
 layout) — their buttons and "view more" links now point at the dedicated pages above instead of scrolling within
 the homepage.
 
+## Source of truth
+
+When sources disagree, content follows this order:
+
+1. **Strategic Plan — "Raising the Bar," 2026–2030** (shared by the founder, Oct 2026): official mission, vision,
+   officer roles and titles, locations, and the four strategic goals.
+2. **2025 Annual Report** (FY2025, published May 2026): board roster, executive team, financials, gala results.
+3. **The old globaltassels.org site**: gala history, giving levels, recruitment process, and anything the two
+   documents above don't cover. Parts of it are stale; a full copy is archived in `content/globaltassels-org/`.
+
+The Strategic Plan names only eight people (the founder, the president, and the officers/chairs), so it settles
+*roles* but not the full board roster, which still comes from the Annual Report.
+
 ## Real content vs. placeholder content
 
 A pass was made to replace fabricated content with real facts pulled from the live globaltassels.org site —

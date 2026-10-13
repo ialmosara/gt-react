@@ -84,8 +84,7 @@ export default function About() {
                 <p className="kicker">Our Mission</p>
                 <h3>Why we exist</h3>
                 <p className="desc">
-                  Provide college education opportunities for underprivileged youth with leadership qualities in the
-                  developing world, and support local community organizations working on poverty reduction.
+                  Provide college education opportunities for underprivileged youth with leadership qualities living in the developing world, and support local community-based organizations with programs related to poverty reduction.
                 </p>
               </div>
             </article>
