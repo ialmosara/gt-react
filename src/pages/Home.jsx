@@ -188,7 +188,7 @@ export default function Home() {
           <div className="stat-grid cols-3">
             <MetricCounter count={6} label="Countries" />
             <MetricCounter count={12} label="Years of Impact" />
-            <MetricCounter count={27} label="Board & Leadership Volunteers" />
+            <MetricCounter count={75} suffix="%" label="of FY2025 Expenses Invested Directly in Students" />
           </div>
         </div>
       </section>
@@ -202,8 +202,7 @@ export default function Home() {
               <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>Education is only the beginning.</h2>
               <p>
                 Global Tassels students aren&rsquo;t simply recipients of financial assistance &mdash; they&rsquo;re
-                expected to become contributors to their own communities. The 360 Impact model turns one scholarship
-                into a continuing cycle of leadership and change.
+                expected to become contributors to their own communities. Launched in 2025, the 360 Community Impact Project strengthens partnerships through student volunteerism and service at local nonprofits around the world.
               </p>
               <Link className="link-arrow" to="/impact#three-sixty">
                 Discover 360 Impact &rarr;

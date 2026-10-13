@@ -23,11 +23,11 @@ const history = [
   },
   {
     year: '2025',
-    text: 'Latosha Baldwin becomes President & CEO, and the GT Institute for Sustainability & Social Mobility begins preparing to launch.',
+    text: 'Led by Board Chair Dr. Elvin T. Ramos and Latosha Baldwin — Global Tassels’ 5th President & CEO — the organization develops its 2026–2030 Strategic Plan, holds its 11th Annual Founder’s Gala at the Eaton Hotel in Washington, DC, and launches the 360 Community Impact Project.',
   },
   {
     year: '2026',
-    text: 'Global Tassels celebrates its 12th Annual Founder’s Gala in New York — twelve years after the first one.',
+    text: 'Global Tassels publishes its 2025 Annual Report and begins carrying out “Raising the Bar,” its 2026–2030 Strategic Plan, while celebrating its 12th Annual Founder’s Gala in New York.',
   },
 ];
 
@@ -159,40 +159,34 @@ export default function About() {
       {/* STRATEGIC PLAN */}
       <section id="strategic-plan">
         <div className="wrap">
-          <SectionHead center eyebrow="Strategic Plan 2025–2030" title="Where Global Tassels is headed next.">
-            Five priorities guide the current strategic plan — deepening impact where we already work, and building
-            the infrastructure to grow responsibly.
+          <SectionHead center eyebrow="Strategic Plan 2026–2030" title="Raising the bar.">
+            Four goals guide the 2026–2030 strategic plan &mdash; a framework for strengthening programs, advancing
+            partnerships, and growing Global Tassels&rsquo; reach. Its rallying cry: #LeadingChangeTogether.
           </SectionHead>
           <div className="program-list" style={{ maxWidth: 760, margin: '0 auto' }}>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 5-9 5-9-5 9-5z" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Deepen impact</strong> in the six countries where Global Tassels already works, before expanding to new ones.</p>
+              <p><strong>Goal 1 &mdash; Transformative leadership &amp; programmatic strategy.</strong> Build a leadership development framework with annual governance and equity-centered training, grow LINC programs and a 360 Impact Commitment Dashboard, and strengthen financial stewardship with quarterly dashboards and a multi-year funding model.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" strokeWidth="1.6" /><path d="M5 20c1-4 4-6 7-6s6 2 7 6" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Grow the 360 Impact network</strong> of alumni mentors so every new scholar has one within reach.</p>
+              <p><strong>Goal 2 &mdash; Organizational development &amp; cultural infrastructure.</strong> Deepen alumni engagement, unify the GT brand and website under a global communications strategy, strengthen governance with a balanced scorecard, and reaffirm the mission, vision, and core values with the Board, staff, and alumni.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" /><circle cx="12" cy="12" r="2.6" fill="currentColor" /></svg>
               </span>
-              <p><strong>Invest in the Institute</strong> as a research and workforce-development engine for the whole ecosystem.</p>
-            </div>
-            <div className="program-item">
-              <span className="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 19v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="1.6" /><circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.6" /></svg>
-              </span>
-              <p><strong>Diversify funding</strong> through the GT Foundation, reducing reliance on any single revenue source.</p>
+              <p><strong>Goal 3 &mdash; Strategic growth in fundraising &amp; global partnerships.</strong> Design a multi-year fundraising plan through the GT Foundation, form Regional Partnership Councils, and cultivate two to three new countries each year through ethical, locally rooted expansion.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
               </span>
-              <p><strong>Strengthen governance</strong> and reporting as Global Tassels becomes a more sophisticated organization.</p>
+              <p><strong>Goal 4 &mdash; Innovative storytelling &amp; community impact.</strong> Launch signature GT Institutes, create the GT StoryLab and a &ldquo;Voices of Global Tassels&rdquo; digital archive, fund community projects with partners in students&rsquo; home areas, and publish an annual GT Impact Report.</p>
             </div>
           </div>
         </div>

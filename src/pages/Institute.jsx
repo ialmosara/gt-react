@@ -28,7 +28,7 @@ export default function Institute() {
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 540 }}>
                 The GT Institute for Sustainability &amp; Social Mobility is being built to expand Global Tassels'
                 work beyond scholarships and into research, knowledge creation, and professional learning — studying
-                what actually keeps first-generation graduates connected to opportunity long after graduation.
+                adult learners (ages 25 and up) and communities through transformative education and applied research centered on sustainable practices and workforce development.
               </p>
               <Link className="link-arrow" style={{ marginTop: 24 }} to="/give">
                 Support the Institute &rarr;
@@ -46,25 +46,25 @@ export default function Institute() {
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 5-9 5-9-5 9-5z" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Applied research</strong> on the outcomes that matter most for first-generation graduates and their communities.</p>
+              <p><strong>Education for adult learners</strong> (ages 25 and up) seeking career realignment, centered on sustainable practices and workforce development.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5" stroke="currentColor" strokeWidth="1.5" /><path d="M4 19a8 8 0 0 1 16 0" stroke="currentColor" strokeWidth="1.5" /></svg>
               </span>
-              <p><strong>Convenings &amp; conferences</strong> that bring together faculty, practitioners, and Global Tassels partners.</p>
+              <p><strong>Applied research</strong> on sustainability and social mobility that bridges education, environmental stewardship, and opportunity.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 19v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="1.6" /><circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.6" /><path d="M15 5.2a3 3 0 0 1 0 5.8" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Workforce development</strong> pathways connecting alumni to employers and career opportunities at home.</p>
+              <p><strong>Workforce development</strong> and training pathways aligned with Career and Technical Education (CTE) models.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" /><circle cx="12" cy="12" r="2.6" fill="currentColor" /></svg>
               </span>
-              <p><strong>Sustainability &amp; social mobility research</strong> shared publicly to inform the broader field, not just Global Tassels' own programs.</p>
+              <p><strong>A hub for learning, innovation, and action</strong> — the first of several themed GT Institutes planned in the 2026–2030 strategic plan, alongside Leadership in Community and Global Education.</p>
             </div>
           </div>
         </div>

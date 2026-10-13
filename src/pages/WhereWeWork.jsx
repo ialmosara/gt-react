@@ -32,9 +32,6 @@ export default function WhereWeWork() {
                 <div className="body">
                   <h3>{c.name}</h3>
                   <p>{c.summary}</p>
-                  <span className="stats-line">
-                    {c.stats.students}+ current students &middot; {c.stats.alumni.toLocaleString()}+ alumni
-                  </span>
                 </div>
               </Link>
             ))}

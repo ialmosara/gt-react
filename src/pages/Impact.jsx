@@ -26,14 +26,16 @@ export default function Impact() {
               <h2 style={{ marginTop: 10 }}>Clear, measurable outcomes.</h2>
             </div>
           </div>
-          <div className="stat-grid cols-3">
+          <div className="stat-grid">
             <MetricCounter count={6} label="Countries" />
             <MetricCounter count={12} label="Years of Impact" />
-            <MetricCounter count={27} label="Board & Leadership Volunteers" />
+            <MetricCounter count={30} label="Board & Executive Leaders" />
+            <MetricCounter count={75} suffix="%" label="of FY2025 Expenses Invested Directly in Students" />
+            <MetricCounter count={52895} prefix="$" label="Raised at the 11th Annual Founder's Gala" />
+            <MetricCounter count={16661} prefix="$" label="Given by Board Members in 2025" />
           </div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: 28, textAlign: 'center' }}>
-            Global Tassels doesn't yet publish organization-wide totals for students served, scholarships awarded,
-            or dollars granted — these numbers reflect what's publicly verifiable today.
+            Source: Global Tassels 2025 Annual Report (fiscal year 2025, published May 2026).
           </p>
         </div>
       </section>
@@ -49,9 +51,7 @@ export default function Impact() {
                 Selected for potential, supported to graduation.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 520 }}>
-                Every current GT Academy scholar is chosen for academic ability and leadership potential, then
-                supported with mentorship, leadership training, and a safety net through graduation — not just a
-                one-time award.
+                GT Academy identifies talented but economically disadvantaged students and provides full-ride scholarships, alongside leadership development, mentorship, and community-engagement projects — not just a one-time award.
               </p>
               <Link className="link-arrow" style={{ marginTop: 24 }} to="/ecosystem/academy">
                 Explore GT Academy &rarr;
@@ -124,8 +124,7 @@ export default function Impact() {
               <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>Education is only the beginning.</h2>
               <p>
                 Global Tassels students aren&rsquo;t simply recipients of financial assistance &mdash; they&rsquo;re
-                expected to become contributors to their own communities. The 360 Impact model turns one scholarship
-                into a continuing cycle of leadership and change.
+                expected to become contributors to their own communities. Launched in 2025, the 360 Community Impact Project strengthens partnerships through student volunteerism and service at local nonprofits around the world — and the 2026–2030 strategic plan builds it out with a 360 Impact Commitment Dashboard.
               </p>
             </div>
             <PhotoPlaceholder

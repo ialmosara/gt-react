@@ -48,25 +48,25 @@ export default function Academy() {
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.3C.6 8.4 2.6 5 6 5c2 0 3.6 1.1 6 3.6C14.4 6.1 16 5 18 5c3.4 0 5.4 3.4 4 6.7C19.5 16.4 12 21 12 21z" stroke="currentColor" strokeWidth="1.5" /></svg>
               </span>
-              <p><strong>Academic scholarships</strong> covering tuition and related costs for students with demonstrated need and leadership potential.</p>
+              <p><strong>Scholarships for marginalized students</strong> — full-ride scholarships for talented, economically disadvantaged students who show leadership potential and a commitment to community development.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" strokeWidth="1.6" /><path d="M5 20c1-4 4-6 7-6s6 2 7 6" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Leadership development</strong> workshops and cohort programming that build the skills students bring back to their communities.</p>
+              <p><strong>University &amp; institutional partnerships</strong> creating pathways to college access where higher education is limited, through academic exchanges, mentorship, and capacity building.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 19v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="1.6" /><circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.6" /></svg>
               </span>
-              <p><strong>Mentorship</strong> pairing current scholars with alumni and Academy staff throughout their studies.</p>
+              <p><strong>Workforce &amp; career development</strong> — career-readiness programs, including vocational and technical education aligned with Career and Technical Education (CTE) models.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
               </span>
-              <p><strong>Student success support</strong> — academic advising, career coaching, and a safety net for students navigating unfamiliar systems.</p>
+              <p><strong>Community engagement &amp; leadership development</strong> — service-learning and community-driven projects that make students agents of change at home.</p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Academy() {
           <div className="stat-grid cols-3">
             <MetricCounter count={6} label="Countries" />
             <MetricCounter count={12} label="Years Awarding Scholarships" />
-            <MetricCounter count={5} label="Pilot Countries Since 2014" />
+            <MetricCounter count={25000} prefix="$" label="Invested in Student Leaders, FY2025" />
           </div>
         </div>
       </section>

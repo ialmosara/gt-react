@@ -26,9 +26,7 @@ export default function Foundation() {
                 Every scholarship depends on someone showing up for it.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 540 }}>
-                The Foundation is responsible for philanthropy, fundraising, partnerships, and advancement across
-                Global Tassels — building the relationships with individual donors, corporate partners, and
-                institutional funders that make GT Academy and the GT Institute possible.
+                The GT Foundation Engagement Commission is the primary fundraising body for Global Tassels, working to ensure the financial stability and growth of the mission — building relationships and securing resources through annual giving, special events, corporate partnerships, private grants, and major gifts.
               </p>
               <Link className="link-arrow" style={{ marginTop: 24 }} to="/give">
                 Give to Global Tassels &rarr;
@@ -46,19 +44,19 @@ export default function Foundation() {
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.3C.6 8.4 2.6 5 6 5c2 0 3.6 1.1 6 3.6C14.4 6.1 16 5 18 5c3.4 0 5.4 3.4 4 6.7C19.5 16.4 12 21 12 21z" stroke="currentColor" strokeWidth="1.5" /></svg>
               </span>
-              <p><strong>Individual giving</strong>, including one-time gifts and monthly donors who sponsor a student's ongoing education.</p>
+              <p><strong>Annual giving</strong>, including one-time gifts and monthly donors who sponsor a student's ongoing education.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5" stroke="currentColor" strokeWidth="1.5" /><path d="M4 19a8 8 0 0 1 16 0" stroke="currentColor" strokeWidth="1.5" /></svg>
               </span>
-              <p><strong>Corporate partnerships</strong> that combine funding with employee volunteering and skills-based support.</p>
+              <p><strong>Corporate partnerships</strong> and sponsorships that combine funding with employee volunteering and skills-based support.</p>
             </div>
             <div className="program-item">
               <span className="icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" /><circle cx="12" cy="12" r="2.6" fill="currentColor" /></svg>
               </span>
-              <p><strong>Foundation &amp; institutional grants</strong> supporting specific programs across the Academy and Institute.</p>
+              <p><strong>Private grants and major gifts</strong> supporting specific programs across the Academy and Institute.</p>
             </div>
             <div className="program-item">
               <span className="icon">

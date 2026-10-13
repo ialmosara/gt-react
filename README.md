@@ -95,8 +95,8 @@ board and executive names, the founding history and timeline, the mission/vision
 actual 12th Annual Founder's Gala details (New York, August 1, 2026, real ticket price and sponsorship tiers).
 Specifically real now:
 
-- **Board of Directors & Executive Leadership** in `pages/Leadership.jsx` — all 21 board members and 6 executive
-  staff, with real names, titles, and affiliations.
+- **Board of Directors & Executive Leadership** in `pages/Leadership.jsx` — all 21 board members and the 9-person
+  executive team, from the 2025 Annual Report, with officer roles from the 2026–2030 strategic plan.
 - **Founder bio** in `pages/About.jsx` and `pages/Leadership.jsx` — Dr. Elvin T. Ramos, founded May 2014, stepped
   down as President effective June 30, 2020.
 - **History timeline** in `pages/About.jsx` — sourced from the real site's published timeline.
@@ -105,12 +105,12 @@ Specifically real now:
   (goal: 120), and the real Bronze/Silver/Gold sponsorship tiers ($500/$1,000/$5,000) plus journal ad pricing.
 - **Ways to give** in `pages/Give.jsx` — A Meaningful Gift, the GT Founding Donors Circle ($10–$49/month),
   Scholarship Underwriting, Foundation Grants, and Special Events all reflect the real site's giving programs.
-- **Organization-scale stats** (Countries, Years of Impact, Board & Leadership Volunteers) — the real site
-  publishes no aggregate impact numbers (no student counts, dollar totals, etc.), so the old fabricated "25,000+
-  students," "$500K+ in grants" style claims were replaced with the few numbers that are actually verifiable.
-  If Global Tassels has real internal figures for students served, scholarships awarded, or dollars granted,
-  swap them into the `MetricCounter` tiles in `pages/Home.jsx`, `pages/Impact.jsx`, `pages/Academy.jsx`, and
-  `pages/WhereWeWork.jsx`.
+- **Impact numbers** on Home, Impact, and Academy come straight from the 2025 Annual Report: 75% of FY2025
+  operating expenses ($24,999.71 of $33,163.62) went directly to students, the 11th Annual Gala raised $52,895
+  ($23,536.93 net), and board members gave $16,661. Countries and years-of-impact are from the organization's
+  own materials. Student/alumni head-counts are still not published anywhere, so none are shown.
+- **Strategic plan** in `pages/About.jsx` — the four goals of "Raising the Bar," the 2026–2030 plan.
+- **Gala history** in `pages/Gala.jsx` now includes the 11th Annual Gala (Eaton Hotel, Washington, DC, 2025).
 - **GT Institute** in `pages/Institute.jsx` — the real Institute hasn't launched yet ("to be launched in 2025...
   stay tuned"), so its page and cross-references now say "launching soon" instead of presenting invented 2026
   publications as already released.
@@ -122,8 +122,8 @@ Still placeholder (no real-site equivalent exists to source from):
   `PhotoPlaceholder` to optionally render a real `<img>` when given a `src` prop, or replace individual
   `<PhotoPlaceholder ... />` usages with your own `<img>` tags — the surrounding CSS (`.photo`, aspect ratios,
   captions) will still apply if you keep the `photo` class.
-- **Per-country stats and stories** in `data/countries.js` — the real site has no published per-country
-  breakdown, so these numbers and student stories remain illustrative.
+- **Per-country programs, impact blurbs, and stories** in `data/countries.js` — no published per-country breakdown
+  exists, so these remain illustrative (the invented student/alumni/partner counts were removed).
 - **News, events, and gala honorees** in `pages/NewsEvents.jsx` and `pages/Gala.jsx` — the real site's own news
   and honoree info is mostly "more to come soon," so specific headlines/dates are still illustrative.
 - **Governance documents** in `pages/Leadership.jsx` (`documents` array) — currently linked to `#governance`

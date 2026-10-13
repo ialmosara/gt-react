@@ -14,6 +14,7 @@ const program = [
 ];
 
 const pastGalas = [
+  { year: '2025', title: '11th Annual Founder’s Gala', note: 'Held at the Eaton Hotel in Washington, DC — $52,895 in donations raised, $23,536.93 net after event expenses.' },
   { year: '2023', title: '9th Annual Founder’s Gala', note: 'August 6, 2023 — held virtually over Zoom.' },
   { year: '2022', title: '8th Annual Founder’s Gala', note: 'June 1, 2022 — held virtually over Zoom, $250 per ticket.' },
 ];

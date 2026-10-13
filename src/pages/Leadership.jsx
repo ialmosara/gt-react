@@ -5,36 +5,39 @@ import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 const board = [
-  { name: 'Brian Rothschild, Ed.D.', title: 'Board Chair · Stevens Institute of Technology' },
-  { name: 'Dr. Shánte Bassett', title: 'Board Vice Chair · Connecticut' },
-  { name: 'Jonathan Santos Ramos', title: 'Board Secretary · New York, NY' },
-  { name: 'Jeffrey Acido, Ph.D.', title: 'University of Hawaii · Honolulu, HI' },
-  { name: 'Kyle Alvarez, MA', title: 'PwC · New York City, NY' },
-  { name: 'Christian Aguiar, M.A.', title: 'University of the District of Columbia' },
-  { name: 'Coco-Nicole Banks, M.A.', title: 'Advanced Energy United · San Jose, CA' },
-  { name: 'Vivian Bejarin, M.A.', title: 'De Anza College · San Jose, CA' },
-  { name: 'Christina Cho', title: 'Treasurer (2023–2025) · De Anza College' },
-  { name: 'Robin Cook, M.S.', title: 'Vice Chair (2023–2025) · Univ. of the District of Columbia' },
-  { name: 'Ferhat Dastan', title: 'Eagle Group NY, Inc. · New York, NY' },
-  { name: 'Divina Grace Dayrit, B.S.', title: 'Ernst & Young · Silver Springs, MD' },
-  { name: 'Gary Greaves, M.A.', title: 'CUNY Guttman Community College · New York City' },
-  { name: 'Nadia Mundle', title: "Mundle's Income Tax & Accounting Services · New York City" },
-  { name: 'Dr. Elvin T. Ramos, D.A.', title: 'Founder of Global Tassels · De Anza College' },
-  { name: 'Hilda Risi, M.S.', title: 'Community Leader & Retired Teacher · Parlin, NJ' },
-  { name: 'Robert Suttle, M.S.', title: 'The Elizabeth Taylor AIDS Foundation · New York City' },
-  { name: 'Carolyn Todd Nobles, M.S.W.', title: 'LaGuardia Community College, CUNY · New York City' },
-  { name: 'Lauren Tomlinson, M.A., SHRM-SCP', title: 'New School University · New York City' },
-  { name: 'Ivory Walker', title: 'Bergdorf Goodman · New York City' },
-  { name: 'Richard Zalman, Ph.D.', title: 'President & CEO of GT (2022–2025) · Univ. of the District of Columbia' },
+  { name: 'Dr. Brian Rothschild', title: 'Chair, Board of Directors · Stevens Institute of Technology' },
+  { name: 'Ms. Robin Cook', title: 'Board Vice Chair · University of the District of Columbia' },
+  { name: 'Dr. Shanté Bassett', title: 'Board Treasurer · Rapha Mind & Body, LLC' },
+  { name: 'Jonathan Santos Ramos', title: 'Board Secretary · Care For the Homeless NYC' },
+  { name: 'Dr. Elvin T. Ramos', title: 'Founder & Head of Global Network · Board Chair 2023–2025' },
+  { name: 'Dr. Jeffrey Acido', title: 'Chair, GT Institutes · University of Hawaii, Leeward CC' },
+  { name: 'Dr. Richard Zalman', title: 'Chair of Commission, GT Foundation · Univ. of the District of Columbia' },
+  { name: 'Christian Aguiar', title: 'University of the District of Columbia' },
+  { name: 'Kyle Alvarez', title: 'PwC' },
+  { name: 'Coco-Nicole Banks', title: 'Advanced Energy United' },
+  { name: 'Vivian Benjarin', title: 'De Anza College' },
+  { name: 'Dr. Sushini Chand', title: 'De Anza College' },
+  { name: 'Christina Cho', title: 'De Anza College' },
+  { name: 'Ferhat Dastan', title: 'Eagle Group NY, Inc.' },
+  { name: 'Divina Grace Dayrit', title: 'Ernst & Young' },
+  { name: 'Ramona Gabriel', title: 'De Anza College' },
+  { name: 'Dr. Nate Mickelson', title: 'New York University' },
+  { name: 'Nadia Mundle', title: "Mundle's Income Tax & Accounting Services Corp." },
+  { name: 'Hilda Risi', title: 'Community Leader' },
+  { name: 'Lauren Tomlinson', title: 'The New School University' },
+  { name: 'Ivory Walker', title: 'Bergdorf Goodman' },
 ];
 
 const executives = [
-  { name: 'Latosha Baldwin, M.S.', title: 'President & CEO · joined 2018' },
-  { name: 'Haronid "Yogi" Javier', title: 'Senior VP & Chief Board Liaison · joined 2017' },
-  { name: 'Clarissa Palomar', title: 'Chief of Staff · joined 2015' },
-  { name: 'Lenora Easter, Esq.', title: 'Chief Legal Counsel · joined 2023' },
-  { name: 'Denica Kelly', title: 'Chief Operations Officer · joined 2022' },
-  { name: 'Timisha Dixon', title: 'Chief Impact Officer · joined 2019' },
+  { name: 'Ms. Latosha Baldwin', title: '5th President & CEO' },
+  { name: 'Denica Kelly', title: 'Chief Operating Officer' },
+  { name: 'Haronid "Yogi" Javier', title: 'Chief Student Success Officer' },
+  { name: 'Clarissa Palomar', title: 'Chief of Staff' },
+  { name: "James O'Brien", title: 'Chief Financial Officer' },
+  { name: 'Lenora Easter, Esq., J.D.', title: 'Chief Legal Counsel' },
+  { name: 'Timisha Dixon', title: 'Chief Impact Officer' },
+  { name: 'Daniel Zapien', title: 'Chief Communications Officer' },
+  { name: 'Karen Gutierrez', title: 'Assistant VP, Student Development' },
 ];
 
 const network = [
@@ -119,8 +122,7 @@ export default function Leadership() {
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 520 }}>
                 Dr. Ramos founded Global Tassels in May 2014 and served as its first President until stepping down
-                effective June 30, 2020. He remains on the Board of Directors, most recently serving as Board Chair
-                from 2023–2025.
+                effective June 30, 2020. He serves as Founder &amp; Head of the Global Network and remains on the Board of Directors, where he was Board Chair from 2023–2025.
               </p>
               <Link className="link-arrow" style={{ marginTop: 20 }} to="/about#founder">
                 Read the Founder&rsquo;s Story &rarr;

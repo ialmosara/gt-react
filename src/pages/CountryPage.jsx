@@ -28,42 +28,11 @@ export default function CountryPage() {
     );
   }
 
-  const { name, summary, heroTag, stats, programs, impact, stories, gallery } = country;
+  const { name, summary, heroTag, programs, impact, stories, gallery } = country;
 
   return (
     <>
       <PageHero eyebrow="Where We Work" title={name} lede={summary} photoLabel={heroTag} photoAria={`Global Tassels students and partners in ${name}`} />
-
-      <section>
-        <div className="wrap">
-          <div className="stat-grid cols-3" style={{ background: 'var(--purple-050)', border: '1px solid var(--line)' }}>
-            <div className="stat" style={{ background: 'transparent' }}>
-              <span className="num" style={{ color: 'var(--purple-700)' }}>
-                {stats.students}+
-              </span>
-              <span className="label" style={{ color: 'var(--ink-soft)' }}>
-                Current Students
-              </span>
-            </div>
-            <div className="stat" style={{ background: 'transparent' }}>
-              <span className="num" style={{ color: 'var(--purple-700)' }}>
-                {stats.alumni.toLocaleString()}+
-              </span>
-              <span className="label" style={{ color: 'var(--ink-soft)' }}>
-                Alumni
-              </span>
-            </div>
-            <div className="stat" style={{ background: 'transparent' }}>
-              <span className="num" style={{ color: 'var(--purple-700)' }}>
-                {stats.partners}+
-              </span>
-              <span className="label" style={{ color: 'var(--ink-soft)' }}>
-                Community Partners
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="ecosystem">
         <div className="wrap">
@@ -71,7 +40,7 @@ export default function CountryPage() {
             <div>
               <p className="eyebrow">Our Students &amp; Alumni</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.2rem)' }}>
-                {stats.students}+ students, {stats.alumni.toLocaleString()}+ alumni and counting.
+                Student leaders &amp; alumni in {name}.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1rem', maxWidth: 520 }}>{summary}</p>
               <p style={{ color: 'var(--ink-soft)', marginTop: 12, fontSize: '1rem', maxWidth: 520 }}>{impact}</p>
