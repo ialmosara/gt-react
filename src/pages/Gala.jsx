@@ -17,7 +17,7 @@ const pastGalas = [
   { year: '2025', title: '11th Annual Founder’s Gala', note: 'Saturday, August 16, 2025 — Washington, DC (Eaton Hotel). $52,895 in donations raised; $23,536.93 net after event expenses.' },
   { year: '2024', title: '10th Annual Founder’s Gala', note: 'Saturday, June 15, 2024 — New York City, in person. Sponsors supported 12 Student Leaders and 17 Sustainable Development Goal tables.' },
   { year: '2023', title: '9th Annual Founder’s Gala', note: 'Sunday, August 6, 2023 — held virtually over Zoom.' },
-  { year: '2022', title: '8th Annual Founder’s Gala', note: 'Held virtually over Zoom at 6pm EDT, $250 per ticket.' },
+  { year: '2022', title: '8th Annual Founder’s Gala', note: 'Friday, July 1, 2022, 6pm EDT — held virtually over Zoom, $250 per ticket.' },
   { year: '2021', title: '7th Annual Founder’s Gala', note: 'Saturday, July 24, 2021 — held virtually, with start times across New York, San Francisco, Guatemala City, Bogotá, Nairobi, and Manila.' },
   { year: '2020', title: '6th Annual Founder’s Gala', note: 'Saturday, August 15, 2020 — held virtually over Zoom.' },
   { year: '2019', title: '5th Annual Founder’s Gala', note: 'Saturday, June 1, 2019 — The Prince George Ballroom, New York City.' },
