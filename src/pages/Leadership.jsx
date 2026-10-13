@@ -6,8 +6,8 @@ import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 const board = [
   { name: 'Dr. Brian Rothschild', title: 'Chair, Board of Directors · Stevens Institute of Technology' },
-  { name: 'Ms. Robin Cook', title: 'Board Vice Chair · University of the District of Columbia' },
-  { name: 'Dr. Shanté Bassett', title: 'Board Treasurer · Rapha Mind & Body, LLC' },
+  { name: 'Ms. Robin Cook', title: 'Board Treasurer · University of the District of Columbia' },
+  { name: 'Dr. Shanté Bassett', title: 'Board Vice Chair · Rapha Mind & Body, LLC' },
   { name: 'Jonathan Santos Ramos', title: 'Board Secretary · Care For the Homeless NYC' },
   { name: 'Dr. Elvin T. Ramos', title: 'Founder & Head of Global Network · Board Chair 2023–2025' },
   { name: 'Dr. Jeffrey Acido', title: 'Chair, GT Institutes · University of Hawaii, Leeward CC' },
@@ -15,7 +15,7 @@ const board = [
   { name: 'Christian Aguiar', title: 'University of the District of Columbia' },
   { name: 'Kyle Alvarez', title: 'PwC' },
   { name: 'Coco-Nicole Banks', title: 'Advanced Energy United' },
-  { name: 'Vivian Benjarin', title: 'De Anza College' },
+  { name: 'Vivian Bejarin', title: 'De Anza College' },
   { name: 'Dr. Sushini Chand', title: 'De Anza College' },
   { name: 'Christina Cho', title: 'De Anza College' },
   { name: 'Ferhat Dastan', title: 'Eagle Group NY, Inc.' },

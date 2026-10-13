@@ -18,16 +18,7 @@ export default function Header() {
     <header className={`site-header ${open ? 'nav-open' : ''}`}>
       <div className="nav-row">
         <Link className="brand" to="/" aria-label="Global Tassels home" onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3L2 8l10 5 8-4.2V15h2V8L12 3z" fill="currentColor" />
-              <path d="M6 12.2V16c0 2 2.7 4 6 4s6-2 6-4v-3.8l-6 3-6-3z" fill="currentColor" opacity="0.55" />
-            </svg>
-          </span>
-          <span className="brand-name">
-            Global Tassels
-            <small>EDUCATION &middot; LEADERSHIP &middot; MOBILITY</small>
-          </span>
+          <img className="brand-logo" src="/images/brand/logo-600.png" alt="Global Tassels" width="180" height="40" />
         </Link>
 
         <nav className="primary" aria-label="Primary">

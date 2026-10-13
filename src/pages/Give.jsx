@@ -118,6 +118,52 @@ export default function Give() {
         </div>
       </section>
 
+      {/* GIVING LEVELS */}
+      <section id="giving-levels">
+        <div className="wrap">
+          <SectionHead center eyebrow="Giving Levels" title="Every gift has a place in the circle.">
+            The annual fund runs January 1 through December 31, and a gift can be restricted to a program or
+            unrestricted.
+          </SectionHead>
+          <div className="tier-grid">
+            <div className="tier-card">
+              <span className="tier-name">GT Leadership Society</span>
+              <span className="tier-price">
+                $250&ndash;$999 <small>/ year</small>
+              </span>
+              <p className="tier-desc">The second level of giving, for supporters and friends around the world.</p>
+              <ul className="tier-perks">
+                <li>Bronze: $250&ndash;$499</li>
+                <li>Silver: $500&ndash;$749</li>
+                <li>Gold: $750&ndash;$999</li>
+              </ul>
+            </div>
+            <div className="tier-card">
+              <span className="tier-name">Board Giving</span>
+              <span className="tier-price">$1,000 <small>/ member / year</small></span>
+              <p className="tier-desc">
+                Beyond governance, every board member contributes and raises funds each year &mdash; $16,661 in
+                2025 &mdash; to select and support more students.
+              </p>
+              <ul className="tier-perks">
+                <li>Fund scholarships directly</li>
+                <li>See the full board on the Leadership page</li>
+              </ul>
+            </div>
+            <div className="tier-card">
+              <span className="tier-name">Gift by Check</span>
+              <span className="tier-price">Mail-in</span>
+              <p className="tier-desc">
+                Make checks payable to Global Tassels. Email info@globaltassels.org to receive the mailing address.
+              </p>
+              <ul className="tier-perks">
+                <li>Tax-deductible 501(c)(3) gift</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SPONSOR A STUDENT */}
       <section id="sponsor-student">
         <div className="wrap">

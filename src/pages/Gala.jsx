@@ -14,9 +14,48 @@ const program = [
 ];
 
 const pastGalas = [
-  { year: '2025', title: '11th Annual Founder’s Gala', note: 'Held at the Eaton Hotel in Washington, DC — $52,895 in donations raised, $23,536.93 net after event expenses.' },
-  { year: '2023', title: '9th Annual Founder’s Gala', note: 'August 6, 2023 — held virtually over Zoom.' },
-  { year: '2022', title: '8th Annual Founder’s Gala', note: 'June 1, 2022 — held virtually over Zoom, $250 per ticket.' },
+  { year: '2025', title: '11th Annual Founder’s Gala', note: 'Saturday, August 16, 2025 — Washington, DC (Eaton Hotel). $52,895 in donations raised; $23,536.93 net after event expenses.' },
+  { year: '2024', title: '10th Annual Founder’s Gala', note: 'Saturday, June 15, 2024 — New York City, in person. Sponsors supported 12 Student Leaders and 17 Sustainable Development Goal tables.' },
+  { year: '2023', title: '9th Annual Founder’s Gala', note: 'Sunday, August 6, 2023 — held virtually over Zoom.' },
+  { year: '2022', title: '8th Annual Founder’s Gala', note: 'Held virtually over Zoom at 6pm EDT, $250 per ticket.' },
+  { year: '2021', title: '7th Annual Founder’s Gala', note: 'Saturday, July 24, 2021 — held virtually, with start times across New York, San Francisco, Guatemala City, Bogotá, Nairobi, and Manila.' },
+  { year: '2020', title: '6th Annual Founder’s Gala', note: 'Saturday, August 15, 2020 — held virtually over Zoom.' },
+  { year: '2019', title: '5th Annual Founder’s Gala', note: 'Saturday, June 1, 2019 — The Prince George Ballroom, New York City.' },
+  { year: '2018', title: '4th Annual Founder’s Gala', note: 'Monday, May 28, 2018 — Battery Gardens, Battery Park, Manhattan.' },
+  { year: '2017', title: '3rd Annual Founder’s Gala', note: 'June 30, 2017 — India House Club, New York City. Founder’s Key Award: Luz Alcira Granada, Save the Children Colombia.' },
+  { year: '2016', title: '2nd Annual Founder’s Gala', note: 'June 30, 2016 — “Piecing It All Together,” a Manhattan penthouse. Founder’s Key Award: Jerome Ringo, Zoetic Global.' },
+  { year: '2015', title: '1st Annual Founder’s Gala', note: 'June 16, 2015 — Museum of the Moving Image, New York. Founder’s Key Award: Jason Tengco, White House Initiative on Asian Americans and Pacific Islanders.' },
+];
+
+const honoreeGroups = [
+  {
+    award: 'Founder’s Leaders Key Award & Keynote Speaker',
+    people: [{ name: 'Karen Gutiérrez', title: 'Global Tassels Student Leader, Colombia' }],
+  },
+  {
+    award: 'Global Community Innovator Awards',
+    people: [
+      { name: 'Alicia Cortéz', title: 'Board President, Gavilan College, California' },
+      { name: 'Dr. Wintor McNeel', title: 'West Coast Regional Director, Child Care Providers United' },
+      { name: 'Claire Kruse', title: 'Head of Global Support, Moodle' },
+      { name: 'Tony D. Elder', title: 'Innovation Specialist, The Guardian Life Insurance' },
+      { name: 'Regie Cabico', title: 'Publisher & Founder Director, Capfire Press, NYC' },
+      { name: 'Dr. Marcela Murillo Van Den Boss', title: 'Associate Professor, Santa Fe College, Florida' },
+      { name: 'Dr. Joshua Moon-Johnson', title: 'Campus President, Connecticut State Community College' },
+      { name: 'Jennifer Lopez', title: 'Teacher/Coach, New York City Department of Education' },
+    ],
+  },
+  {
+    award: 'Community Artist Excellence Award',
+    people: [{ name: 'Sage Rivera', title: 'Artist & Filmmaker; Chief Strategy Officer, Destination Tomorrow' }],
+  },
+  {
+    award: 'Distinguished Service Awards',
+    people: [
+      { name: 'Denica Kelly', title: 'Global Tassels Executive Leadership Team' },
+      { name: 'Vivian Bejarin', title: 'Global Tassels Board Member' },
+    ],
+  },
 ];
 
 export default function Gala() {
@@ -35,7 +74,7 @@ export default function Gala() {
       <section id="about">
         <div className="wrap">
           <div className="split">
-            <PhotoPlaceholder aria="Guests mingling at a past Founder's Gala" label="Photo — Gala reception" />
+            <PhotoPlaceholder src="/images/gala/gala-group.jpg" aria="Global Tassels supporters posing together at a Founder's Gala" style={{ aspectRatio: '3 / 2' }} />
             <div>
               <p className="eyebrow">About the Gala</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>
@@ -127,24 +166,34 @@ export default function Gala() {
       {/* HONOREES */}
       <section id="honorees">
         <div className="wrap">
-          <SectionHead center eyebrow="Honorees" title="Recognized this year." />
-          <div className="people-grid cols-3" style={{ maxWidth: 860, margin: '0 auto' }}>
-            <div className="person-card">
-              <PhotoPlaceholder aria="Portrait of this year's Founder's Award honoree" />
-              <span className="name">Founder&rsquo;s Award</span>
-              <span className="role">Honoree to be announced</span>
-            </div>
-            <div className="person-card">
-              <PhotoPlaceholder aria="Portrait of this year's Community Partner Award honoree" />
-              <span className="name">Community Partner Award</span>
-              <span className="role">Honoree to be announced</span>
-            </div>
-            <div className="person-card">
-              <PhotoPlaceholder aria="Portrait of this year's Alumni Achievement Award honoree" />
-              <span className="name">Alumni Achievement Award</span>
-              <span className="role">Honoree to be announced</span>
-            </div>
+          <SectionHead center eyebrow="2026 Honorees" title="Recognized this year.">
+            The 12th Annual Founder&rsquo;s Gala honors educators, innovators, and community leaders &mdash; with a
+            Global Tassels Student Leader as keynote speaker.
+          </SectionHead>
+          <div style={{ maxWidth: 760, margin: '0 auto' }}>
+            {honoreeGroups.map((group) => (
+              <div key={group.award} style={{ marginBottom: 36 }}>
+                <p className="eyebrow" style={{ marginBottom: 14 }}>{group.award}</p>
+                <div className="program-list">
+                  {group.people.map((p) => (
+                    <div className="program-item" key={p.name}>
+                      <span className="icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <p><strong>{p.name}</strong> &mdash; {p.title}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
+          <img
+            src="/images/gala/honorees-2026.jpg"
+            alt="Graphic listing the 2026 Founder's Gala honorees, keynote speaker, and award categories"
+            style={{ maxWidth: 520, width: '100%', margin: '24px auto 0', borderRadius: 4 }}
+          />
         </div>
       </section>
 

@@ -305,6 +305,11 @@ header.site-header {
   letter-spacing: 0.01em;
   line-height: 1.1;
 }
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 .brand-name small {
   display: block;
   font-family: 'Public Sans', sans-serif;

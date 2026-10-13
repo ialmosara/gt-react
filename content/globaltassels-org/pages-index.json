@@ -1,0 +1,303 @@
+[
+  {
+    "slug": "home",
+    "title": "Home",
+    "url": "https://globaltassels.org/",
+    "modified": "2026-04-06",
+    "words": 747
+  },
+  {
+    "slug": "about-us",
+    "title": "About Us",
+    "url": "https://globaltassels.org/about-us/",
+    "modified": "2022-04-19",
+    "words": 385
+  },
+  {
+    "slug": "about-us__our-governance",
+    "title": "The Board of Directors",
+    "url": "https://globaltassels.org/about-us/our-governance/",
+    "modified": "2026-03-11",
+    "words": 202
+  },
+  {
+    "slug": "about-us__team",
+    "title": "Our Executive Leadership Team",
+    "url": "https://globaltassels.org/about-us/team/",
+    "modified": "2026-03-11",
+    "words": 73
+  },
+  {
+    "slug": "about-us__the-history",
+    "title": "The History",
+    "url": "https://globaltassels.org/about-us/the-history/",
+    "modified": "2024-07-17",
+    "words": 149
+  },
+  {
+    "slug": "about-us__the-idea",
+    "title": "The Idea",
+    "url": "https://globaltassels.org/about-us/the-idea/",
+    "modified": "2022-04-19",
+    "words": 184
+  },
+  {
+    "slug": "about-us__the-mission",
+    "title": "The Mission",
+    "url": "https://globaltassels.org/about-us/the-mission/",
+    "modified": "2024-04-21",
+    "words": 260
+  },
+  {
+    "slug": "cart",
+    "title": "Cart",
+    "url": "https://globaltassels.org/cart/",
+    "modified": "2022-04-19",
+    "words": 0
+  },
+  {
+    "slug": "checkout",
+    "title": "Checkout",
+    "url": "https://globaltassels.org/checkout/",
+    "modified": "2022-04-19",
+    "words": 0
+  },
+  {
+    "slug": "contact-us",
+    "title": "Contact Us",
+    "url": "https://globaltassels.org/contact-us/",
+    "modified": "2022-04-19",
+    "words": 27
+  },
+  {
+    "slug": "countries-gtstudentleaders",
+    "title": "GT Student Leaders",
+    "url": "https://globaltassels.org/countries-gtstudentleaders/",
+    "modified": "2024-08-08",
+    "words": 155
+  },
+  {
+    "slug": "follow-us",
+    "title": "Follow us and share your thoughts!",
+    "url": "https://globaltassels.org/follow-us/",
+    "modified": "2022-04-19",
+    "words": 23
+  },
+  {
+    "slug": "fundraising",
+    "title": "Fundraising",
+    "url": "https://globaltassels.org/fundraising/",
+    "modified": "2023-07-21",
+    "words": 601
+  },
+  {
+    "slug": "fundraising__founders-gala",
+    "title": "The Annual Founder’s Gala | a benefit event",
+    "url": "https://globaltassels.org/fundraising/founders-gala/",
+    "modified": "2026-05-11",
+    "words": 353
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2015-archive",
+    "title": "Founder’s Gala 2015 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2015-archive/",
+    "modified": "2022-04-19",
+    "words": 166
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2016-archive",
+    "title": "Founder’s Gala 2016 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2016-archive/",
+    "modified": "2022-04-19",
+    "words": 160
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2017-archive",
+    "title": "Founder’s Gala 2017 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2017-archive/",
+    "modified": "2022-04-19",
+    "words": 218
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2018-archive",
+    "title": "Founder’s Gala 2018 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2018-archive/",
+    "modified": "2022-04-19",
+    "words": 253
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2019-archive",
+    "title": "Founder’s Gala 2019 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2019-archive/",
+    "modified": "2022-04-19",
+    "words": 390
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2020-archive",
+    "title": "Founder’s Gala 2020 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2020-archive/",
+    "modified": "2022-04-19",
+    "words": 248
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2021-archive",
+    "title": "Founder’s Gala 2021 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2021-archive/",
+    "modified": "2022-04-19",
+    "words": 248
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2022-archive",
+    "title": "Founder’s Gala 2022 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2022-archive/",
+    "modified": "2023-04-30",
+    "words": 330
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2023-archive",
+    "title": "Founder’s Gala 2023 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2023-archive/",
+    "modified": "2024-02-05",
+    "words": 323
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2024-archive",
+    "title": "Founder’s Gala 2024 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2024-archive/",
+    "modified": "2026-02-12",
+    "words": 308
+  },
+  {
+    "slug": "fundraising__founders-gala__founders-gala-2025-archive",
+    "title": "Founder’s Gala 2025 Archive",
+    "url": "https://globaltassels.org/fundraising/founders-gala/founders-gala-2025-archive/",
+    "modified": "2026-02-12",
+    "words": 352
+  },
+  {
+    "slug": "fundraising__gt-runner",
+    "title": "GT Runner",
+    "url": "https://globaltassels.org/fundraising/gt-runner/",
+    "modified": "2022-04-19",
+    "words": 265
+  },
+  {
+    "slug": "fundraising__photo-galleries",
+    "title": "Photo Galleries",
+    "url": "https://globaltassels.org/fundraising/photo-galleries/",
+    "modified": "2022-04-19",
+    "words": 0
+  },
+  {
+    "slug": "fundraising__project-see-student-educational-endeavors",
+    "title": "PROJECT SEE “Student Educational Endeavors”",
+    "url": "https://globaltassels.org/fundraising/project-see-student-educational-endeavors/",
+    "modified": "2022-04-19",
+    "words": 154
+  },
+  {
+    "slug": "fundraising__ways-to-give",
+    "title": "Ways to Give",
+    "url": "https://globaltassels.org/fundraising/ways-to-give/",
+    "modified": "2022-04-19",
+    "words": 575
+  },
+  {
+    "slug": "get-involved",
+    "title": "Community Engagements",
+    "url": "https://globaltassels.org/get-involved/",
+    "modified": "2022-04-19",
+    "words": 98
+  },
+  {
+    "slug": "get-involved__institute",
+    "title": "Institute for Sustainability & Social Mobility",
+    "url": "https://globaltassels.org/get-involved/institute/",
+    "modified": "2024-11-28",
+    "words": 6
+  },
+  {
+    "slug": "get-involved__linc",
+    "title": "Learning and Innovative Communities (LInC)",
+    "url": "https://globaltassels.org/get-involved/linc/",
+    "modified": "2024-11-28",
+    "words": 156
+  },
+  {
+    "slug": "get-involved__mentoring-program",
+    "title": "Mentoring Program",
+    "url": "https://globaltassels.org/get-involved/mentoring-program/",
+    "modified": "2022-04-19",
+    "words": 150
+  },
+  {
+    "slug": "get-involved__volunteers",
+    "title": "Volunteers",
+    "url": "https://globaltassels.org/get-involved/volunteers/",
+    "modified": "2022-04-19",
+    "words": 194
+  },
+  {
+    "slug": "my-account",
+    "title": "My Account",
+    "url": "https://globaltassels.org/my-account/",
+    "modified": "2022-04-19",
+    "words": 0
+  },
+  {
+    "slug": "our-partners",
+    "title": "Our Partners",
+    "url": "https://globaltassels.org/our-partners/",
+    "modified": "2025-10-22",
+    "words": 445
+  },
+  {
+    "slug": "recruitment",
+    "title": "Global Recruitment",
+    "url": "https://globaltassels.org/recruitment/",
+    "modified": "2022-04-19",
+    "words": 423
+  },
+  {
+    "slug": "recruitment__global-community-project",
+    "title": "PROJECT AIR “Academia In Reach”",
+    "url": "https://globaltassels.org/recruitment/global-community-project/",
+    "modified": "2022-04-19",
+    "words": 94
+  },
+  {
+    "slug": "recruitment__nominations",
+    "title": "Nominations",
+    "url": "https://globaltassels.org/recruitment/nominations/",
+    "modified": "2026-09-23",
+    "words": 396
+  },
+  {
+    "slug": "recruitment__our-criteria",
+    "title": "Our Criteria",
+    "url": "https://globaltassels.org/recruitment/our-criteria/",
+    "modified": "2024-07-17",
+    "words": 465
+  },
+  {
+    "slug": "recruitment__project-joi-justice-opportunity-initiative",
+    "title": "PROJECT JOI “Justice & Opportunity Initiative”",
+    "url": "https://globaltassels.org/recruitment/project-joi-justice-opportunity-initiative/",
+    "modified": "2022-04-19",
+    "words": 151
+  },
+  {
+    "slug": "shop",
+    "title": "Shop",
+    "url": "https://globaltassels.org/shop/",
+    "modified": "2022-04-19",
+    "words": 0
+  },
+  {
+    "slug": "terms-and-conditions",
+    "title": "Terms and Conditions",
+    "url": "https://globaltassels.org/terms-and-conditions/",
+    "modified": "2022-04-19",
+    "words": 2505
+  }
+]
