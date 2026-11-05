@@ -122,7 +122,7 @@ export default function NewsEvents() {
       <section className="ecosystem" id="publications">
         <div className="wrap">
           <SectionHead eyebrow="Publications" title="Reports available now, and research on the way.">
-            The GT Institute for Sustainability &amp; Social Mobility has launched, and its first publications
+            The GT Institute for Sustainability &amp; Social Mobility launches in 2027, and its first publications
             will be posted here. In the meantime, here's what Global Tassels already publishes.
           </SectionHead>
           <div className="doc-list">

@@ -29,7 +29,7 @@ export default function Impact() {
           <div className="stat-grid">
             <MetricCounter count={6} label="Countries" />
             <MetricCounter count={12} label="Years of Impact" />
-            <MetricCounter count={30} label="Board & Executive Leaders" />
+            <MetricCounter count={21} label="Volunteer Board Members" />
             <MetricCounter count={75} suffix="%" label="of FY2025 Expenses Invested Directly in Students" />
             <MetricCounter count={52895} prefix="$" label="Raised at the 11th Annual Founder's Gala" />
             <MetricCounter count={16661} prefix="$" label="Given by Board Members in 2025" />

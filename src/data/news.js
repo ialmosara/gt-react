@@ -37,6 +37,13 @@ export const newsItems = [
     photo: 'Cover of the Raising the Bar strategic plan',
   },
   {
+    cat: 'GT Institute',
+    date: 'Launching 2027',
+    title: 'The GT Institute will launch with the Polytechnic University of the Philippines',
+    blurb: 'Beginning in 2027, the Institute will offer education and applied research on sustainability and workforce development, including for adult learners.',
+    photo: 'Photo of the GT Institute team',
+  },
+  {
     cat: 'Board',
     date: 'January 2027',
     title: 'A new Board of Directors term begins January 1',

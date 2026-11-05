@@ -37,14 +37,10 @@ const units = [
     heading: 'GT Academy — Executive Leadership Team',
     people: [
       { name: 'Ms. Latosha Baldwin', title: '5th President & CEO · Maryland' },
-      { name: 'Denica Kelly', title: 'Chief Operating Officer' },
       { name: 'Haronid "Yogi" Javier', title: 'Chief Operations Officer' },
       { name: 'Clarissa Palomar', title: 'Social Media Officer' },
-      { name: "James O'Brien", title: 'Chief Financial Officer' },
       { name: 'Lenora Easter, Esq., J.D.', title: 'Chief Legal Counsel' },
-      { name: 'Timisha Dixon', title: 'Chief Impact Officer' },
       { name: 'Daniel Zapien', title: 'Director of Productions' },
-      { name: 'Karen Gutierrez', title: 'Assistant VP, Student Development' },
     ],
   },
   {

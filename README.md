@@ -130,9 +130,8 @@ Specifically real now:
   own materials. Student/alumni head-counts are still not published anywhere, so none are shown.
 - **Strategic plan** in `pages/About.jsx` — the four goals of "Raising the Bar," the 2026–2030 plan.
 - **Gala history** in `pages/Gala.jsx` now includes the 11th Annual Gala (Eaton Hotel, Washington, DC, 2025).
-- **GT Institute** in `pages/Institute.jsx` — the real Institute hasn't launched yet ("to be launched in 2025...
-  stay tuned"), so its page and cross-references now say "launching soon" instead of presenting invented 2026
-  publications as already released.
+- **GT Institute** in `pages/Institute.jsx` — per the founder (Nov 2026), it launches in 2027 in partnership with the
+  Polytechnic University of the Philippines (PUP), so the page is written in the future tense.
 
 Still placeholder (no real-site equivalent exists to source from):
 

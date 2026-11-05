@@ -10,8 +10,8 @@ export default function Institute() {
     <>
       <PageHero
         eyebrow="GT Institute for Sustainability & Social Mobility"
-        title="Research built to make opportunity last."
-        lede="The Institute has launched in partnership with PUP, advancing education and applied research on sustainable practices, workforce development, and social mobility."
+        title="Launching in 2027 — research built to make opportunity last."
+        lede="The Institute launches in 2027 in partnership with the Polytechnic University of the Philippines (PUP), advancing education and applied research on sustainable practices, workforce development, and social mobility."
         photoLabel="Photo — GT Institute"
         photoAria="Global Tassels GT Institute team and partners"
       />
@@ -21,12 +21,12 @@ export default function Institute() {
           <div className="split">
             <PhotoPlaceholder aria="GT Institute faculty and partners working together" label="Photo — GT Institute" />
             <div>
-              <p className="eyebrow">What the Institute does</p>
+              <p className="eyebrow">What the Institute will do</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>
-                Education creates opportunity. Research makes it last.
+                Education creates opportunity. Research will make it last.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 540 }}>
-                The GT Institute for Sustainability &amp; Social Mobility empowers adult learners (ages 25 and up)
+                The GT Institute for Sustainability &amp; Social Mobility will empower adult learners (ages 25 and up)
                 and communities through transformative education and applied research centered on sustainable
                 practices and workforce development &mdash; a hub for learning, innovation, and action that
                 bridges education, sustainability, and opportunity.
@@ -45,7 +45,7 @@ export default function Institute() {
 
       <section className="ecosystem">
         <div className="wrap">
-          <SectionHead center eyebrow="Focus areas" title="Where the Institute concentrates its work." />
+          <SectionHead center eyebrow="Focus areas" title="Where the Institute will concentrate its work." />
           <div className="program-list" style={{ maxWidth: 760, margin: '0 auto' }}>
             <div className="program-item">
               <span className="icon">
