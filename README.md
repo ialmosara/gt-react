@@ -103,8 +103,8 @@ When sources disagree, content follows this order:
 3. **The old globaltassels.org site**: gala history, giving levels, recruitment process, and anything the two
    documents above don't cover. Parts of it are stale; a full copy is archived in `content/globaltassels-org/`.
 
-The Strategic Plan names only eight people, so it settles officer *roles*. The full board roster (effective
-January 1, 2027) comes from the founder's email; where he gave only a name and state, the site shows just those
+The Strategic Plan names only eight people, so it settles officer *roles*. The full board roster (the 2027
+term — the site launches after January 1, 2027) comes from the founder's email; where he gave only a name and state, the site shows just those
 until an affiliation is supplied.
 
 ## Real content vs. placeholder content
@@ -147,6 +147,9 @@ Still placeholder (no real-site equivalent exists to source from):
 - **Governance documents** in `pages/Leadership.jsx` (`documents` array) — currently linked to `#governance`
   as placeholders; point these at real PDFs once you have them.
 - **Gala payment link** — add it once 2027 pricing is announced (see Accepting payments).
+- **Recruitment process** on `/recruitment` follows the founder's "Global Recruitment Process" infographic (Oct 2026):
+  five stages, the TIRCA assessment rubric, and a six-month timeline. It supersedes the older five-step process on
+  the original site. The infographic itself isn't embedded (it has typos); the content is rebuilt as text.
 - **Nomination form** — `/recruitment` explains the process and shows which countries are open, but the actual
   nomination form is not online: the original collects a student's and parents' personal details, so it needs a
   deliberate home (a hosted form with proper privacy handling) rather than a quick endpoint. For now the page's

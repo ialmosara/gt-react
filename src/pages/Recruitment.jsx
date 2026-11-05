@@ -6,35 +6,59 @@ import { nominationWindows, windowStatus, windowDates } from '../data/recruitmen
 
 const CONTACT = 'info@globaltassels.org';
 
+// Source: the GT Academy "Global Recruitment Process" infographic sent by the founder (Oct 2026).
 const steps = [
   {
-    title: 'Nomination',
-    text: 'A student must be nominated by someone affiliated with a school, community-based organization, NGO, government office, or business.',
+    title: 'Nomination & outreach',
+    points: [
+      'Engage with schools, community partners, and networks.',
+      'Invite nominations for Grade 11–12 students.',
+      'Share Global Tassels’ mission, eligibility criteria, and the nomination process.',
+      'Confirm qualified nominees and schedule interviews.',
+    ],
   },
   {
-    title: 'Application',
-    text: 'Nominated students are invited to an all-day open application session, where they take a basic English-language sample exam and bring their required documents.',
+    title: 'Pre-interview preparation',
+    points: [
+      'Review nominations and supporting documents.',
+      'Prepare interview questions and tools using the TIRCA framework.',
+      'Confirm the interview schedule and logistics.',
+      'Coordinate with local partners and venues.',
+    ],
   },
   {
-    title: 'Interviews',
-    text: 'Each student sits for a two-to-one interview with a Global Tassels team member and a GT Community Advisor from their own country, plus a group interview.',
+    title: 'Student interviews & TIRCA assessment',
+    points: [
+      'Conduct group activities and individual interviews.',
+      'Assess each student against the five TIRCA criteria below.',
+      'Collect applications, verify information, and take student photos.',
+    ],
   },
   {
-    title: 'Vetting',
-    text: 'GT delegates review the student’s portfolio and the internal vetting process begins.',
+    title: 'Review & recommend',
+    points: [
+      'The delegation debriefs and reviews all interview notes and assessments.',
+      'Top candidates are identified using the TIRCA rubric and alignment with the Global Tassels mission.',
+      'The delegation prepares a Visit Summary Report with recommendations.',
+      'Top candidates are submitted for board review and presentation.',
+    ],
   },
   {
-    title: 'Final decision',
-    text: 'Decisions can take up to three months. Acceptance comes by certified mail and a personal phone call; non-acceptance letters go by email to the student and the nominator.',
+    title: 'Board deliberation & final selection',
+    points: [
+      'The delegation presents its top candidates to Global Tassels leadership, the Board of Directors, and Foundation Commissioners.',
+      'They discuss, deliberate, and vote.',
+      'The selected GT Student Leader is announced and welcomed into the Global Tassels family.',
+    ],
   },
 ];
 
-const criteria = [
-  { name: 'Academic excellence', desc: 'A strong academic record and real intellectual curiosity in their field.' },
-  { name: 'Leadership skills', desc: 'Leadership experience in school or community, and the potential to take initiative and lead projects.' },
-  { name: 'Community engagement', desc: 'A history of service and a demonstrated commitment to social change.' },
-  { name: 'Independence & self-motivation', desc: 'Self-reliance, drive, and the ambition to overcome obstacles.' },
-  { name: 'Passion for poverty reduction', desc: 'A genuine interest in poverty alleviation and an understanding of social justice.' },
+const tirca = [
+  { letter: 'T', name: 'Talent & Potential' },
+  { letter: 'I', name: 'Impact & Initiative' },
+  { letter: 'R', name: 'Resilience & Character' },
+  { letter: 'C', name: 'Community Engagement' },
+  { letter: 'A', name: 'Academic Commitment' },
 ];
 
 const statusLabel = { open: 'Open', closed: 'Closed', soon: 'Opens soon' };
@@ -61,23 +85,37 @@ export default function Recruitment() {
       <section id="process">
         <div className="wrap">
           <div className="split">
-            <PhotoPlaceholder aria="A nominated student at an open application session" label="Photo — open application session" />
+            <PhotoPlaceholder aria="Global Tassels delegation interviewing prospective Student Leaders" label="Photo — recruitment interviews" />
             <div>
               <p className="eyebrow">How selection works</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>
-                Five steps, from nomination to decision.
+                Five stages, from nomination to selection.
               </h2>
               <div className="pillars" style={{ marginTop: 28 }}>
-                {steps.map((s, i) => (
-                  <div className="pillar" key={s.title}>
+                {steps.map((st, i) => (
+                  <div className="pillar" key={st.title}>
                     <span className="pillar-num">{String(i + 1).padStart(2, '0')}</span>
                     <div>
-                      <h3>{s.title}</h3>
-                      <p>{s.text}</p>
+                      <h3>{st.title}</h3>
+                      <ul style={{ color: 'var(--ink-soft)', fontSize: '0.95rem', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        {st.points.map((pt) => (
+                          <li key={pt}>&bull; {pt}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          <div className="callout" style={{ marginTop: 56 }}>
+            <div>
+              <h3>How long does it take?</h3>
+              <p>
+                The process can take up to six months, from initial outreach and nominations to the final
+                selection and welcome of a new GT Student Leader. After every visit, a Visit Summary Report is
+                shared with the entire Global Tassels community.
+              </p>
             </div>
           </div>
         </div>
@@ -113,18 +151,18 @@ export default function Recruitment() {
         </div>
       </section>
 
-      {/* WHO WE LOOK FOR */}
+      {/* THE TIRCA RUBRIC */}
       <section id="criteria">
         <div className="wrap">
-          <SectionHead center eyebrow="Who we look for" title="Students ready to lead change at home.">
-            These are the basic criteria. Partner colleges and universities may add their own requirements, such
-            as exams, documentation, and applications.
+          <SectionHead center eyebrow="How candidates are assessed" title="The TIRCA framework.">
+            Every candidate is assessed against five criteria. Nominations are open to Grade 11&ndash;12 students,
+            and partner colleges and universities may add their own requirements.
           </SectionHead>
           <div className="network-grid">
-            {criteria.map((c) => (
-              <div className="network-card" key={c.name}>
-                <h3>{c.name}</h3>
-                <p>{c.desc}</p>
+            {tirca.map((t) => (
+              <div className="network-card" key={t.name} style={{ alignItems: 'center', textAlign: 'center' }}>
+                <span className="pillar-num" style={{ fontSize: '2rem', width: 'auto' }}>{t.letter}</span>
+                <h3>{t.name}</h3>
               </div>
             ))}
           </div>

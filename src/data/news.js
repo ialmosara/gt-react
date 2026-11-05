@@ -12,7 +12,7 @@ export const newsItems = [
     cat: 'Global Recruitment',
     date: 'October – November 2026',
     title: 'Delegation visits Jamaica to interview prospective Student Leaders',
-    blurb: 'From October 30 to November 3, the GT Academy team interviewed candidates and met local partners. A final selection by the Board follows in December.',
+    blurb: 'From October 30 to November 3, the GT Academy team interviewed candidates and met local partners. A final selection by the Board follows.',
     photo: 'Photo of the Global Tassels delegation in Jamaica',
   },
   {
@@ -46,8 +46,8 @@ export const newsItems = [
   {
     cat: 'Board',
     date: 'January 2027',
-    title: 'A new Board of Directors term begins January 1',
-    blurb: 'Twenty-one volunteers will guide Global Tassels, including new members joining from across the country.',
+    title: 'Welcoming the 2027 Board of Directors',
+    blurb: 'Twenty-one volunteers guide Global Tassels in 2027, including new members from across the country.',
     photo: 'Photo of Global Tassels board members',
   },
 ];

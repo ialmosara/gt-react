@@ -107,7 +107,7 @@ export default function Leadership() {
       <section id="board">
         <div className="wrap">
           <SectionHead center eyebrow="Board of Directors" title="21 volunteers governing Global Tassels.">
-            Board roster for the term beginning January 1, 2027.
+            The Board of Directors for 2027.
           </SectionHead>
           <div className="people-grid">
             {board.map((person) => (

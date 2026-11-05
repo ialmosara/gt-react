@@ -14,7 +14,7 @@
 
 export const nominationWindows = [
   { country: 'Cambodia', status: 'open', visit: null, event: 'March 24, 2026' },
-  { country: 'Jamaica', opens: '2026-09-15', closes: '2026-10-20', visit: null, event: 'October 30 – November 3, 2026', note: 'Interviews complete; final selection in December 2026.' },
+  { country: 'Jamaica', opens: '2026-09-15', closes: '2026-10-20', visit: null, event: 'October 30 – November 3, 2026', note: 'Interviews complete; final selection by the Board.' },
   { country: 'Colombia', status: 'closed', visit: 'TBD', event: 'TBD' },
   { country: 'India', status: 'closed', visit: 'March 2026', event: 'TBD' },
   { country: 'Kenya', status: 'closed', visit: 'TBD', event: 'TBD' },

@@ -31,7 +31,7 @@ const history = [
   },
   {
     year: '2027',
-    text: 'A new Board of Directors term begins January 1, and the 13th Annual Founder’s Gala comes to The Terra in San Francisco on May 15.',
+    text: 'A new Board of Directors term opens the year, and the 13th Annual Founder’s Gala comes to The Terra in San Francisco on May 15.',
   },
 ];
 
