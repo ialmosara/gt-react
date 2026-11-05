@@ -2,7 +2,7 @@
 // Swap these numbers, names, and stories for the real thing whenever
 // GT staff have them — the CountryPage component doesn't need to change,
 // which is the whole point of building this as a template + data file.
-// Adding a seventh country later (Thailand, Ghana, Peru, ...) means
+// Adding a seventh country later (Turkey, Peru, Sierra Leone, Guatemala, Thailand, ...) means
 // adding one more object here.
 
 export const countries = [

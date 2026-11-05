@@ -54,12 +54,12 @@ export default function WhereWeWork() {
           </div>
           <div className="stat-grid cols-3">
             <MetricCounter count={6} label="Active Countries" />
-            <MetricCounter count={3} label="Countries in Cultivation" />
+            <MetricCounter count={5} label="Countries in Cultivation" />
             <MetricCounter count={12} label="Years of Impact" />
           </div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: 24, textAlign: 'center' }}>
             As we grow, we plan to work with other countries around the world — currently cultivating partnerships
-            in Turkey, Peru, and Thailand.
+            in Turkey, Peru, Sierra Leone, Guatemala, and Thailand.
           </p>
         </div>
       </section>

@@ -73,11 +73,11 @@ export default function Give() {
                 relationships that help the organization grow worldwide.
               </p>
               <ul className="tier-perks">
-                <li>Tax-deductible receipt emailed instantly</li>
+                <li>Tax-deductible 501(c)(3) gift</li>
                 <li>One-time or annual giving</li>
               </ul>
-              <DonateButton campaign="donate" fallbackHref="#donate" className="btn btn-outline">
-                Give Once
+              <DonateButton className="btn btn-outline">
+                Donate with PayPal
               </DonateButton>
             </div>
             <div className="tier-card featured">
@@ -91,13 +91,13 @@ export default function Give() {
                 legacy as an organization.
               </p>
               <ul className="tier-perks">
-                <li>Cancel or adjust anytime</li>
+                <li>Pledged for the whole year</li>
                 <li>Recognized as a Founding Donor</li>
-                <li>Annual giving summary for tax season</li>
+                <li>Email us to set it up</li>
               </ul>
-              <DonateButton campaign="donate" fallbackHref="#donate" className="btn btn-gold">
-                Give Monthly
-              </DonateButton>
+              <a className="btn btn-gold" href="mailto:info@globaltassels.org?subject=Founding%20Donors%20Circle">
+                Join the Circle
+              </a>
             </div>
             <div className="tier-card">
               <span className="tier-name">Special Events</span>
@@ -177,9 +177,9 @@ export default function Give() {
                 Leader's college education — a contribution that can also be directed straight to the university to
                 offset tuition, room and board, or other resources.
               </p>
-              <DonateButton campaign="donate" fallbackHref="#sponsor-student" className="link-arrow">
-                Sponsor a Student &rarr;
-              </DonateButton>
+              <a className="link-arrow" style={{ marginTop: 24 }} href="mailto:info@globaltassels.org?subject=Scholarship%20underwriting">
+                Ask about underwriting &rarr;
+              </a>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
 import NewsletterForm from '../components/NewsletterForm.jsx';
 import InstagramFeed from '../components/InstagramFeed.jsx';
+import { newsItems } from '../data/news.js';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 function DocIcon() {
@@ -17,32 +18,11 @@ function DocIcon() {
 
 const events = [
   {
-    month: 'Aug',
-    day: '1',
-    title: "12th Annual Founder's Gala",
-    meta: 'New York, NY',
-    desc: "An evening celebrating education, leadership, and global impact. Tickets and sponsorship packages are open now.",
-  },
-  {
-    month: 'Sep',
-    day: '10',
-    title: 'GT Academy Fall Cohort Orientation',
-    meta: 'Virtual — all six countries',
-    desc: 'The incoming class of scholars meets Academy staff, mentors, and each other for the first time.',
-  },
-  {
-    month: 'Oct',
-    day: '22',
-    title: 'GT Institute Workforce Pathways Convening',
-    meta: 'Nairobi, Kenya',
-    desc: 'Researchers, employers, and policymakers gather to discuss what keeps graduates connected to opportunity at home.',
-  },
-  {
-    month: 'Dec',
-    day: '3',
-    title: 'Year-End Giving Deadline',
-    meta: 'Online',
-    desc: 'The last day to make a tax-deductible gift count toward this calendar year.',
+    month: 'May',
+    day: '15',
+    title: "13th Annual Founder's Gala",
+    meta: 'The Terra, San Francisco, CA',
+    desc: 'Theme: “Community and Togetherness Matter Most.” Ticket and sponsorship details will be announced soon.',
   },
 ];
 
@@ -63,66 +43,18 @@ export default function NewsEvents() {
         <div className="wrap">
           <SectionHead center eyebrow="News" title="Latest from the ecosystem." />
           <div className="news-grid">
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of a Global Tassels delegation trip" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Global Delegations</span> &middot; May 2026
-                </span>
-                <h3>GT leadership returns from a delegation to Kenya and the Philippines</h3>
-                <p>Site visits with country teams, partner NGOs, and this year&rsquo;s incoming scholarship cohort.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of an Institute research convening" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">GT Institute</span> &middot; Coming Soon
-                </span>
-                <h3>The GT Institute for Sustainability & Social Mobility is preparing to launch</h3>
-                <p>Research, convenings, and workforce-development programming are on the way — stay tuned.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo from the Founder's Gala" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Gala</span> &middot; February 2026
-                </span>
-                <h3>Save the date: the 12th Annual Founder&rsquo;s Gala returns to New York</h3>
-                <p>Tickets and sponsorship packages are open now.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of a new scholarship cohort" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">GT Academy</span> &middot; January 2026
-                </span>
-                <h3>200 new scholars welcomed across six countries</h3>
-                <p>The largest single scholarship cohort in Global Tassels&rsquo; history begins the spring term.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of a corporate partnership signing" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Foundation</span> &middot; December 2025
-                </span>
-                <h3>New corporate partnership expands scholarships in Colombia</h3>
-                <p>A multi-year commitment will fund 150 additional scholarships over the next five years.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of Global Tassels alumni reunion" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Alumni</span> &middot; November 2025
-                </span>
-                <h3>First-ever global alumni reunion draws graduates from all six countries</h3>
-                <p>Alumni reconnected, mentored current scholars, and helped shape the next Strategic Plan.</p>
-              </div>
-            </article>
+            {newsItems.map((n) => (
+              <article className="news-card" key={n.title}>
+                <PhotoPlaceholder aria={n.photo} />
+                <div className="body">
+                  <span className="meta">
+                    <span className="cat">{n.cat}</span> &middot; {n.date}
+                  </span>
+                  <h3>{n.title}</h3>
+                  <p>{n.blurb}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -130,7 +62,9 @@ export default function NewsEvents() {
       {/* EVENTS */}
       <section className="ecosystem" id="events">
         <div className="wrap">
-          <SectionHead center eyebrow="Events" title="Upcoming on the calendar." />
+          <SectionHead center eyebrow="Events" title="Upcoming on the calendar.">
+            More dates will be posted here as they&rsquo;re confirmed.
+          </SectionHead>
           <div className="event-list" style={{ maxWidth: 760, margin: '0 auto' }}>
             {events.map((e) => (
               <div className="event-item" key={e.title}>
@@ -188,8 +122,8 @@ export default function NewsEvents() {
       <section className="ecosystem" id="publications">
         <div className="wrap">
           <SectionHead eyebrow="Publications" title="Reports available now, and research on the way.">
-            The GT Institute for Sustainability &amp; Social Mobility is still preparing to launch — its research
-            briefs aren't published yet. In the meantime, here's what Global Tassels already publishes.
+            The GT Institute for Sustainability &amp; Social Mobility has launched, and its first publications
+            will be posted here. In the meantime, here's what Global Tassels already publishes.
           </SectionHead>
           <div className="doc-list">
             <a className="doc-item" href="/leadership#governance">
@@ -216,7 +150,7 @@ export default function NewsEvents() {
               </span>
               <div>
                 <div className="doc-name">GT Institute Research</div>
-                <div className="doc-meta">Coming soon</div>
+                <div className="doc-meta">First publications to come</div>
               </div>
             </a>
           </div>

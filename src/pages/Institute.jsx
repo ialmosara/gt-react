@@ -10,25 +10,30 @@ export default function Institute() {
     <>
       <PageHero
         eyebrow="GT Institute for Sustainability & Social Mobility"
-        title="Launching soon — research built to make opportunity last."
-        lede="The Institute will expand Global Tassels' work beyond scholarships into research, convenings, and innovative solutions for sustainable development and social mobility. Stay tuned."
-        photoLabel="Photo — planning session for the Institute's launch"
-        photoAria="Global Tassels staff planning the GT Institute's programming"
+        title="Research built to make opportunity last."
+        lede="The Institute has launched in partnership with PUP, advancing education and applied research on sustainable practices, workforce development, and social mobility."
+        photoLabel="Photo — GT Institute"
+        photoAria="Global Tassels GT Institute team and partners"
       />
 
       <section>
         <div className="wrap">
           <div className="split">
-            <PhotoPlaceholder aria="Global Tassels staff and advisors planning the Institute's programming" label="Photo — Institute in the works" />
+            <PhotoPlaceholder aria="GT Institute faculty and partners working together" label="Photo — GT Institute" />
             <div>
-              <p className="eyebrow">What the Institute will do</p>
+              <p className="eyebrow">What the Institute does</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>
-                Education creates opportunity. Research will make it last.
+                Education creates opportunity. Research makes it last.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 540 }}>
-                The GT Institute for Sustainability &amp; Social Mobility is being built to expand Global Tassels'
-                work beyond scholarships and into research, knowledge creation, and professional learning — studying
-                adult learners (ages 25 and up) and communities through transformative education and applied research centered on sustainable practices and workforce development.
+                The GT Institute for Sustainability &amp; Social Mobility empowers adult learners (ages 25 and up)
+                and communities through transformative education and applied research centered on sustainable
+                practices and workforce development &mdash; a hub for learning, innovation, and action that
+                bridges education, sustainability, and opportunity.
+              </p>
+              <p style={{ color: 'var(--ink-soft)', marginTop: 12, fontSize: '1.02rem', maxWidth: 540 }}>
+                Dr. Jeffrey Acido serves as Executive Director and Chief Institute Officer, supported by Institute
+                Ambassadors Javette Johnson and Vivian Bejarin.
               </p>
               <Link className="link-arrow" style={{ marginTop: 24 }} to="/give">
                 Support the Institute &rarr;
@@ -40,7 +45,7 @@ export default function Institute() {
 
       <section className="ecosystem">
         <div className="wrap">
-          <SectionHead center eyebrow="Focus areas" title="Where the Institute will concentrate its work." />
+          <SectionHead center eyebrow="Focus areas" title="Where the Institute concentrates its work." />
           <div className="program-list" style={{ maxWidth: 760, margin: '0 auto' }}>
             <div className="program-item">
               <span className="icon">
@@ -75,10 +80,9 @@ export default function Institute() {
           <div className="callout" style={{ background: 'var(--purple-050)', color: 'var(--ink)' }}>
             <div>
               <p className="eyebrow">Institute Publications</p>
-              <h3 style={{ color: 'var(--purple-900)', marginTop: 8 }}>Coming soon.</h3>
+              <h3 style={{ color: 'var(--purple-900)', marginTop: 8 }}>First publications to come.</h3>
               <p style={{ color: 'var(--ink-soft)' }}>
-                The Institute is still in development — its first research briefs and convenings haven't been
-                published yet. Sign up for the newsletter to be the first to know when it launches.
+                The Institute&rsquo;s first research briefs and convenings will be posted here as they&rsquo;re published. Email us to be the first to know.
               </p>
             </div>
             <div className="callout-actions">

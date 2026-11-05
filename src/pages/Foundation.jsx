@@ -72,8 +72,8 @@ export default function Foundation() {
         <div className="wrap">
           <div className="callout">
             <div>
-              <h3>The 12th Annual Founder's Gala</h3>
-              <p>New York &middot; August 1, 2026 — tickets and sponsorship packages are open.</p>
+              <h3>The 13th Annual Founder's Gala</h3>
+              <p>San Francisco &middot; May 15, 2027 — save the date. Ticket and sponsorship details to come.</p>
             </div>
             <div className="callout-actions">
               <Link className="btn btn-gold" to="/gala">

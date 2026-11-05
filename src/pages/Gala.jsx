@@ -2,18 +2,10 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
-import DonateButton from '../components/DonateButton.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
-const program = [
-  { time: '6:00 PM', title: 'Cocktail Reception', desc: 'Welcome drinks, silent auction preview, and the photo gallery from this year’s countries.' },
-  { time: '7:15 PM', title: 'Dinner & Program', desc: 'Seated dinner, the founder’s remarks, and student and alumni speakers from this year’s cohort.' },
-  { time: '8:30 PM', title: 'Honoree Presentation', desc: 'This year’s Founder’s Award and Community Partner Award are presented.' },
-  { time: '9:00 PM', title: 'Live Fund-a-Need', desc: 'A live appeal to fund next year’s incoming scholarship cohort.' },
-  { time: '9:30 PM', title: 'Dancing & Dessert', desc: 'The evening closes with music, dessert, and time to connect.' },
-];
-
 const pastGalas = [
+  { year: '2026', title: '12th Annual Founder’s Gala', note: 'Saturday, August 1, 2026 — New York. Keynote speaker and Founder’s Leaders Key Award recipient: Karen Gutiérrez, a Global Tassels Student Leader from Colombia.' },
   { year: '2025', title: '11th Annual Founder’s Gala', note: 'Saturday, August 16, 2025 — Washington, DC (Eaton Hotel). $52,895 in donations raised; $23,536.93 net after event expenses.' },
   { year: '2024', title: '10th Annual Founder’s Gala', note: 'Saturday, June 15, 2024 — New York City, in person. Sponsors supported 12 Student Leaders and 17 Sustainable Development Goal tables.' },
   { year: '2023', title: '9th Annual Founder’s Gala', note: 'Sunday, August 6, 2023 — held virtually over Zoom.' },
@@ -27,7 +19,7 @@ const pastGalas = [
   { year: '2015', title: '1st Annual Founder’s Gala', note: 'June 16, 2015 — Museum of the Moving Image, New York. Founder’s Key Award: Jason Tengco, White House Initiative on Asian Americans and Pacific Islanders.' },
 ];
 
-const honoreeGroups = [
+const honorees2026 = [
   {
     award: 'Founder’s Leaders Key Award & Keynote Speaker',
     people: [{ name: 'Karen Gutiérrez', title: 'Global Tassels Student Leader, Colombia' }],
@@ -58,16 +50,43 @@ const honoreeGroups = [
   },
 ];
 
+// Award categories and criteria from the founder's Nov 2026 call for 2027 nominations.
+const awards2027 = [
+  {
+    name: 'Founder’s Leaders Key Award & Keynote Speaker',
+    desc: 'Bestowed on one individual with a record of global community engagement who is an influential figure of social change, with international development or sustainability work. This honoree is also the evening’s keynote speaker.',
+  },
+  {
+    name: 'Global Community Innovation Award',
+    desc: 'For individuals who have led community initiatives at the local, national, or global level, where the cause and impact align with one or more of the 17 UN Sustainable Development Goals.',
+  },
+  {
+    name: 'Distinguished Service Awards',
+    desc: 'For members of the Global Tassels network who have served at least two years as a board member, volunteer, community advisor, consultant, or executive leadership team member.',
+  },
+  {
+    name: 'Community Artist Excellence Award',
+    desc: 'For one artist who has shown artistic talent and built community through contributions in the realm of education at any level.',
+  },
+];
+
+const pricing2026 = [
+  { name: 'Individual ticket', price: '$350' },
+  { name: 'Bronze — Entertainment Sponsor', price: '$500' },
+  { name: 'Silver — Reception Hour Sponsor', price: '$1,000' },
+  { name: 'Gold — Gala Underwriter (five tickets included)', price: '$5,000' },
+];
+
 export default function Gala() {
   useDocumentTitle("Founder's Gala");
   return (
     <>
       <PageHero
         eyebrow="The Founder's Gala"
-        title="12th Annual Founder's Gala"
-        lede="Saturday, August 1, 2026 · New York — celebrating education, leadership, and global impact, and the students, alumni, and partners who make it possible. All proceeds support college education opportunities for Global Tassels' Student Leaders."
-        photoLabel="Photo — Founder's Gala, New York"
-        photoAria="Guests at a past Founder's Gala in New York"
+        title="13th Annual Founder's Gala"
+        lede="Saturday, May 15, 2027 · The Terra, San Francisco — our theme is “Community and Togetherness Matter Most.” Save the date."
+        photoLabel="Photo — Founder's Gala"
+        photoAria="Guests at a past Founder's Gala"
       />
 
       {/* ABOUT THE GALA */}
@@ -78,17 +97,16 @@ export default function Gala() {
             <div>
               <p className="eyebrow">About the Gala</p>
               <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.3rem)' }}>
-                Twelve years of opening doors.
+                Community and Togetherness Matter Most.
               </h2>
               <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 520 }}>
-                The Founder's Gala is Global Tassels' flagship annual fundraising event, bringing together donors,
-                alumni, and community partners for an evening that funds the next year of Student Leader
-                scholarships. This year's gala returns to New York in person.
+                The Founder&rsquo;s Gala is Global Tassels&rsquo; flagship annual fundraising event, bringing together
+                donors, alumni, and community partners to celebrate education, leadership, and global impact. The
+                13th Annual Gala takes place at The Terra in San Francisco on Saturday, May 15, 2027.
               </p>
               <p style={{ color: 'var(--ink-soft)', marginTop: 12, fontSize: '1.02rem', maxWidth: 520 }}>
-                All proceeds support Global Tassels' mission to provide college education opportunities for
-                underprivileged youth with leadership qualities in the developing world — and, this year, to help
-                extend that opportunity toward a US education for select Student Leaders.
+                All proceeds support Global Tassels&rsquo; mission to provide college education opportunities for
+                underprivileged youth with leadership qualities in the developing world.
               </p>
             </div>
           </div>
@@ -98,67 +116,26 @@ export default function Gala() {
       {/* TICKETS & SPONSORSHIP */}
       <section className="ecosystem" id="tickets">
         <div className="wrap">
-          <SectionHead center eyebrow="Tickets & Sponsorship" title="Join us in the room.">
-            Our goal this year is 120 individual tickets, plus sponsors at every level — all pricing is subject to
-            change based on availability.
+          <SectionHead center eyebrow="Tickets & Sponsorship" title="Details are on the way.">
+            Ticket prices and sponsorship packages for the 13th Annual Gala haven&rsquo;t been announced yet. Email
+            us and we&rsquo;ll let you know as soon as they open.
           </SectionHead>
-          <div className="tier-grid cols-4">
-            <div className="tier-card featured">
-              <span className="tier-badge">Goal: 120 Tickets</span>
-              <span className="tier-name">Individual Ticket</span>
-              <span className="tier-price">$350</span>
-              <p className="tier-desc">A single seat at the 12th Annual Founder&rsquo;s Gala in New York.</p>
-              <ul className="tier-perks">
-                <li>Full evening program</li>
-                <li>Tax-deductible portion applies</li>
-              </ul>
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-gold">
-                Buy Your Ticket
-              </DonateButton>
-            </div>
-            <div className="tier-card">
-              <span className="tier-name">Bronze — Entertainment Sponsor</span>
-              <span className="tier-price">$500</span>
-              <p className="tier-desc">Your name or company logo displayed throughout the event.</p>
-              <ul className="tier-perks">
-                <li>Continuous recognition among guests</li>
-              </ul>
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
-                Become a Bronze Sponsor
-              </DonateButton>
-            </div>
-            <div className="tier-card">
-              <span className="tier-name">Silver — Reception Hour Sponsor</span>
-              <span className="tier-price">$1,000</span>
-              <p className="tier-desc">Prominent recognition during the welcome champagne hour.</p>
-              <ul className="tier-perks">
-                <li>Name &amp; logo displayed at the event</li>
-                <li>Featured in the gala journal</li>
-              </ul>
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
-                Become a Silver Sponsor
-              </DonateButton>
-            </div>
-            <div className="tier-card">
-              <span className="tier-name">Gold — Gala Underwriter</span>
-              <span className="tier-price">$5,000</span>
-              <p className="tier-desc">Premier recognition throughout the event and gala journal.</p>
-              <ul className="tier-perks">
-                <li>Prominent logo placement all evening</li>
-                <li>Acknowledged in all promotional materials</li>
-                <li>Five complimentary tickets included</li>
-              </ul>
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-outline">
-                Become a Gold Sponsor
-              </DonateButton>
-            </div>
-          </div>
-
-          <div style={{ marginTop: 48, textAlign: 'center' }}>
-            <p className="eyebrow">Journal Page Advertisement</p>
-            <p style={{ color: 'var(--ink-soft)', marginTop: 10, fontSize: '0.98rem' }}>
-              Business Card Ad $100 &middot; Quarter Page $200 &middot; Half Page $250 &middot; Full Page $300
+          <div className="window-card" style={{ maxWidth: 560, margin: '0 auto' }}>
+            <p className="eyebrow">For reference: the 2026 gala</p>
+            {pricing2026.map((row) => (
+              <div key={row.name} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, fontSize: '0.95rem', color: 'var(--ink-soft)' }}>
+                <span>{row.name}</span>
+                <strong style={{ color: 'var(--purple-800)' }}>{row.price}</strong>
+              </div>
+            ))}
+            <p style={{ fontSize: '0.82rem', color: 'var(--muted)', marginTop: 6 }}>
+              2027 pricing may differ. Journal page ads ran $100&ndash;$300 in 2026.
             </p>
+          </div>
+          <div className="stories-foot">
+            <a className="btn btn-gold" href="mailto:info@globaltassels.org?subject=13th%20Annual%20Founder%27s%20Gala">
+              Ask about tickets &amp; sponsorship
+            </a>
           </div>
         </div>
       </section>
@@ -166,12 +143,34 @@ export default function Gala() {
       {/* HONOREES */}
       <section id="honorees">
         <div className="wrap">
-          <SectionHead center eyebrow="2026 Honorees" title="Recognized this year.">
-            The 12th Annual Founder&rsquo;s Gala honors educators, innovators, and community leaders &mdash; with a
-            Global Tassels Student Leader as keynote speaker.
+          <SectionHead center eyebrow="2027 Honorees" title="Honorees will be announced.">
+            Nominations for the 2027 honorees are being gathered now. These are the four recognitions the gala
+            presents each year.
+          </SectionHead>
+          <div className="program-list" style={{ maxWidth: 760, margin: '0 auto' }}>
+            {awards2027.map((a) => (
+              <div className="program-item" key={a.name}>
+                <span className="icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <p><strong>{a.name}</strong> &mdash; {a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 HONOREES */}
+      <section className="ecosystem" id="honorees-2026">
+        <div className="wrap">
+          <SectionHead center eyebrow="2026 Honorees" title="Last year&rsquo;s honorees.">
+            The 12th Annual Founder&rsquo;s Gala, held August 1, 2026 in New York, honored educators, innovators,
+            and community leaders &mdash; with a Global Tassels Student Leader as keynote speaker.
           </SectionHead>
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
-            {honoreeGroups.map((group) => (
+            {honorees2026.map((group) => (
               <div key={group.award} style={{ marginBottom: 36 }}>
                 <p className="eyebrow" style={{ marginBottom: 14 }}>{group.award}</p>
                 <div className="program-list">
@@ -197,58 +196,8 @@ export default function Gala() {
         </div>
       </section>
 
-      {/* PROGRAM */}
-      <section className="ecosystem" id="program">
-        <div className="wrap">
-          <SectionHead eyebrow="Program" title="How the evening runs." />
-          <div className="program-list" style={{ maxWidth: 760, margin: '0 auto' }}>
-            {program.map((p) => (
-              <div className="program-item" key={p.title}>
-                <span className="icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
-                    <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                  </svg>
-                </span>
-                <p>
-                  <strong>
-                    {p.time} &mdash; {p.title}
-                  </strong>
-                  <br />
-                  {p.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TRAVEL & HOTEL */}
-      <section id="travel">
-        <div className="wrap">
-          <div className="split reverse">
-            <PhotoPlaceholder aria="Photo of the gala's host hotel exterior" label="Photo — host hotel" />
-            <div>
-              <p className="eyebrow">Travel &amp; Hotel Info</p>
-              <h2 style={{ marginTop: 10, fontSize: 'clamp(1.8rem,3vw,2.2rem)' }}>Planning your trip to New York.</h2>
-              <p style={{ color: 'var(--ink-soft)', marginTop: 16, fontSize: '1.02rem', maxWidth: 520 }}>
-                Global Tassels has secured a discounted room block at the host hotel for gala weekend. Book early —
-                the block typically sells out three weeks before the event.
-              </p>
-              <p style={{ color: 'var(--ink-soft)', marginTop: 12, fontSize: '1.02rem', maxWidth: 520 }}>
-                Details on the host hotel, discounted rate, airport transportation, and parking will be sent to all
-                ticket holders and posted here closer to the event.
-              </p>
-              <a className="link-arrow" style={{ marginTop: 20 }} href="#travel">
-                Hotel Booking Details &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* GALLERY */}
-      <section className="ecosystem" id="gallery">
+      <section id="gallery">
         <div className="wrap">
           <SectionHead eyebrow="Gala Gallery" title="Moments from past galas." />
           <div className="gallery-grid">
@@ -261,7 +210,7 @@ export default function Gala() {
       </section>
 
       {/* PAST GALAS */}
-      <section id="past-galas">
+      <section className="ecosystem" id="past-galas">
         <div className="wrap">
           <SectionHead eyebrow="Past Galas" title="A look back." />
           <div className="timeline">
@@ -281,16 +230,16 @@ export default function Gala() {
         <div className="wrap">
           <div className="callout">
             <div>
-              <h3>Save your seat for August 1, 2026.</h3>
-              <p>Individual tickets and sponsorships are available now.</p>
+              <h3>Save the date: May 15, 2027.</h3>
+              <p>The 13th Annual Founder&rsquo;s Gala &middot; The Terra, San Francisco.</p>
             </div>
             <div className="callout-actions">
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-gold">
-                Purchase Tickets
-              </DonateButton>
-              <DonateButton campaign="gala" fallbackHref="#tickets" className="btn btn-ghost">
-                Become a Sponsor
-              </DonateButton>
+              <a className="btn btn-gold" href="mailto:info@globaltassels.org?subject=13th%20Annual%20Founder%27s%20Gala">
+                Get gala updates
+              </a>
+              <Link className="btn btn-ghost" to="/give">
+                Support our students
+              </Link>
             </div>
           </div>
         </div>

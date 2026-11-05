@@ -102,12 +102,13 @@ export default function Recruitment() {
                 {w.dates && <p className="window-line">Window: {w.dates}</p>}
                 {w.visit && <p className="window-line">Cultivation visit: {w.visit}</p>}
                 {w.event && <p className="window-line">Global recruitment: {w.event}</p>}
+                {w.note && <p className="window-line"><strong>{w.note}</strong></p>}
               </article>
             ))}
           </div>
           <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.88rem', marginTop: 28 }}>
-            Also in cultivation: Thailand (visit date to be determined). Schedules change — email us to confirm
-            a country&rsquo;s current status.
+            Also in cultivation: Turkey, Peru, Sierra Leone, Guatemala, and Thailand. Schedules change — email us to
+            confirm a country&rsquo;s current status.
           </p>
         </div>
       </section>

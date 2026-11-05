@@ -4,40 +4,69 @@ import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
+// Board roster effective January 1, 2027, as provided by the founder (Oct 2026).
+// His rule: always show full name, current affiliation, and state. Where an
+// affiliation hasn't been supplied yet, only the state is shown.
 const board = [
   { name: 'Dr. Brian Rothschild', title: 'Chair, Board of Directors · Stevens Institute of Technology · New York' },
-  { name: 'Ms. Robin Cook', title: 'Board Vice Chair · University of the District of Columbia · Washington, DC' },
+  { name: 'Prof. Robin Cook', title: 'Board Vice Chair · University of the District of Columbia · Washington, DC' },
   { name: 'Dr. Shanté Bassett', title: 'Board Treasurer · Rapha Mind & Body, LLC · Connecticut' },
-  { name: 'Mr. Jonathan Santos-Ramos', title: 'Board Secretary · Care For the Homeless NYC · New Jersey' },
-  { name: 'Dr. Elvin T. Ramos', title: 'Founder & Head of Global Network · California · Board Chair 2023–2025' },
-  { name: 'Dr. Jeffrey Acido', title: 'Chair, GT Institutes · University of Hawaii, Leeward CC · Hawaii' },
+  { name: 'Mr. Jonathan Santos Ramos', title: 'Board Secretary · Care For the Homeless NYC · New York' },
+  { name: 'Dr. Elvin T. Ramos', title: 'Founder & Head of Global Network · De Anza College · California' },
+  { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer · University of Hawaii, Leeward CC · Hawaii' },
   { name: 'Dr. Richard Zalman', title: 'Chair of Commission, GT Foundation · Univ. of the District of Columbia · New Jersey' },
-  { name: 'Christian Aguiar', title: 'University of the District of Columbia' },
-  { name: 'Kyle Alvarez', title: 'PwC' },
-  { name: 'Coco-Nicole Banks', title: 'Advanced Energy United' },
-  { name: 'Vivian Bejarin', title: 'De Anza College' },
-  { name: 'Dr. Sushini Chand', title: 'De Anza College' },
-  { name: 'Christina Cho', title: 'De Anza College' },
-  { name: 'Ferhat Dastan', title: 'Eagle Group NY, Inc.' },
-  { name: 'Divina Grace Dayrit', title: 'Ernst & Young' },
-  { name: 'Ramona Gabriel', title: 'De Anza College' },
-  { name: 'Dr. Nate Mickelson', title: 'New York University' },
-  { name: 'Nadia Mundle', title: "Mundle's Income Tax & Accounting Services Corp." },
-  { name: 'Hilda Risi', title: 'Community Leader' },
-  { name: 'Lauren Tomlinson', title: 'The New School University' },
-  { name: 'Ivory Walker', title: 'Bergdorf Goodman' },
+  { name: 'Dr. Christian Aguiar', title: 'University of the District of Columbia · Washington, DC' },
+  { name: 'Ms. Coco-Nicole Banks', title: 'Advanced Energy United · California' },
+  { name: 'Prof. Vivian Bejarin', title: 'De Anza College · California' },
+  { name: 'Ms. Divina Grace Dayrit', title: 'Ernst & Young · Maryland' },
+  { name: 'Ms. Nicole Trevena Flores', title: 'Arkansas' },
+  { name: 'Prof. Gary Greaves', title: 'CUNY Guttman Community College · New York' },
+  { name: 'Ms. Jophrane Ligonde', title: 'New York' },
+  { name: 'Ms. Nadia Mundle', title: "Mundle's Income Tax & Accounting Services Corp. · New York" },
+  { name: 'Ms. Lydia Nylander', title: 'Maryland' },
+  { name: 'Ms. Pepper Reed', title: 'Washington, DC' },
+  { name: 'Ms. Hilda Risi', title: 'Community Leader & Retired Teacher · New Jersey' },
+  { name: 'Mr. Map Shen', title: 'New York' },
+  { name: 'Ms. Carolyn Todd', title: 'LaGuardia Community College, CUNY · New York' },
+  { name: 'Ms. Lauren Tomlinson', title: 'The New School University · New York' },
 ];
 
-const executives = [
-  { name: 'Ms. Latosha Baldwin', title: '5th President & CEO · Maryland' },
-  { name: 'Denica Kelly', title: 'Chief Operating Officer' },
-  { name: 'Haronid "Yogi" Javier', title: 'Chief Student Success Officer' },
-  { name: 'Clarissa Palomar', title: 'Chief of Staff' },
-  { name: "James O'Brien", title: 'Chief Financial Officer' },
-  { name: 'Lenora Easter, Esq., J.D.', title: 'Chief Legal Counsel' },
-  { name: 'Timisha Dixon', title: 'Chief Impact Officer' },
-  { name: 'Daniel Zapien', title: 'Chief Communications Officer' },
-  { name: 'Karen Gutierrez', title: 'Assistant VP, Student Development' },
+// Leadership is organized by entity: the GT Academy, the GT Institute, and the GT Foundation.
+const units = [
+  {
+    heading: 'GT Academy — Executive Leadership Team',
+    people: [
+      { name: 'Ms. Latosha Baldwin', title: '5th President & CEO · Maryland' },
+      { name: 'Denica Kelly', title: 'Chief Operating Officer' },
+      { name: 'Haronid "Yogi" Javier', title: 'Chief Operations Officer' },
+      { name: 'Clarissa Palomar', title: 'Social Media Officer' },
+      { name: "James O'Brien", title: 'Chief Financial Officer' },
+      { name: 'Lenora Easter, Esq., J.D.', title: 'Chief Legal Counsel' },
+      { name: 'Timisha Dixon', title: 'Chief Impact Officer' },
+      { name: 'Daniel Zapien', title: 'Director of Productions' },
+      { name: 'Karen Gutierrez', title: 'Assistant VP, Student Development' },
+    ],
+  },
+  {
+    heading: 'GT Academy — Leadership',
+    people: [
+      { name: 'Denica Kelly', title: 'Chair' },
+      { name: 'Chantelle Etienne', title: 'Co-Chair' },
+      { name: 'Dr. Marcela Murillo', title: 'Co-Chair' },
+    ],
+  },
+  {
+    heading: 'GT Institute for Sustainability & Social Mobility',
+    people: [
+      { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer' },
+      { name: 'Ms. Javette Johnson', title: 'Ambassador' },
+      { name: 'Prof. Vivian Bejarin', title: 'Ambassador' },
+    ],
+  },
+  {
+    heading: 'GT Foundation',
+    people: [{ name: 'Dr. Richard Zalman', title: 'Chair of Commission, GT Foundation' }],
+  },
 ];
 
 const network = [
@@ -81,7 +110,9 @@ export default function Leadership() {
       {/* BOARD OF DIRECTORS */}
       <section id="board">
         <div className="wrap">
-          <SectionHead center eyebrow="Board of Directors" title="21 volunteers governing Global Tassels." />
+          <SectionHead center eyebrow="Board of Directors" title="21 volunteers governing Global Tassels.">
+            Board roster for the term beginning January 1, 2027.
+          </SectionHead>
           <div className="people-grid">
             {board.map((person) => (
               <div className="person-card" key={person.name}>
@@ -98,15 +129,20 @@ export default function Leadership() {
       <section className="ecosystem" id="executive">
         <div className="wrap">
           <SectionHead center eyebrow="Executive Leadership" title="Who runs Global Tassels day to day." />
-          <div className="people-grid cols-3" style={{ maxWidth: 860, margin: '0 auto' }}>
-            {executives.map((person) => (
-              <div className="person-card" key={person.name}>
-                <PhotoPlaceholder aria={`Portrait of ${person.name}, Global Tassels ${person.title.split(' · ')[0]}`} />
-                <span className="name">{person.name}</span>
-                <span className="role">{person.title}</span>
+          {units.map((unit) => (
+            <div key={unit.heading} style={{ marginBottom: 48 }}>
+              <p className="eyebrow" style={{ textAlign: 'center', marginBottom: 22 }}>{unit.heading}</p>
+              <div className="people-grid cols-3" style={{ maxWidth: 860, margin: '0 auto' }}>
+                {unit.people.map((person) => (
+                  <div className="person-card" key={unit.heading + person.name}>
+                    <PhotoPlaceholder aria={`Portrait of ${person.name}, ${person.title.split(' · ')[0]}`} />
+                    <span className="name">{person.name}</span>
+                    <span className="role">{person.title}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 

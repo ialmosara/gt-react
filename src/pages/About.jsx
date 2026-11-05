@@ -29,6 +29,10 @@ const history = [
     year: '2026',
     text: 'Global Tassels publishes its 2025 Annual Report and begins carrying out “Raising the Bar,” its 2026–2030 Strategic Plan, while celebrating its 12th Annual Founder’s Gala in New York.',
   },
+  {
+    year: '2027',
+    text: 'A new Board of Directors term begins January 1, and the 13th Annual Founder’s Gala comes to The Terra in San Francisco on May 15.',
+  },
 ];
 
 export default function About() {

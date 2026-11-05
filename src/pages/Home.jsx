@@ -3,6 +3,7 @@ import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
 import SectionHead from '../components/SectionHead.jsx';
 import MetricCounter from '../components/MetricCounter.jsx';
 import NewsletterForm from '../components/NewsletterForm.jsx';
+import { newsItems } from '../data/news.js';
 import { countries } from '../data/countries.js';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
@@ -329,36 +330,18 @@ export default function Home() {
         <div className="wrap">
           <SectionHead center eyebrow="News &amp; Events" title="What&rsquo;s happening at Global Tassels" />
           <div className="news-grid">
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of a Global Tassels delegation trip" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Global Delegations</span> &middot; May 2026
-                </span>
-                <h3>GT leadership returns from a delegation to Kenya and the Philippines</h3>
-                <p>Site visits with country teams, partner NGOs, and this year&rsquo;s incoming scholarship cohort.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo of an Institute research convening" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">GT Institute</span> &middot; Coming Soon
-                </span>
-                <h3>The GT Institute for Sustainability & Social Mobility is preparing to launch</h3>
-                <p>Research, convenings, and workforce-development programming are on the way — stay tuned.</p>
-              </div>
-            </article>
-            <article className="news-card">
-              <PhotoPlaceholder aria="Photo from the Founder's Gala" />
-              <div className="body">
-                <span className="meta">
-                  <span className="cat">Gala</span> &middot; February 2026
-                </span>
-                <h3>Save the date: the 12th Annual Founder&rsquo;s Gala returns to New York</h3>
-                <p>Tickets and sponsorship packages are open now.</p>
-              </div>
-            </article>
+            {newsItems.slice(0, 3).map((n) => (
+              <article className="news-card" key={n.title}>
+                <PhotoPlaceholder aria={n.photo} />
+                <div className="body">
+                  <span className="meta">
+                    <span className="cat">{n.cat}</span> &middot; {n.date}
+                  </span>
+                  <h3>{n.title}</h3>
+                  <p>{n.blurb}</p>
+                </div>
+              </article>
+            ))}
           </div>
           <div className="stories-foot">
             <Link className="btn btn-outline" to="/news">
@@ -373,18 +356,18 @@ export default function Home() {
         <div className="wrap">
           <div>
             <p className="eyebrow on-dark">The Founder&rsquo;s Gala</p>
-            <h2 style={{ marginTop: 10 }}>12th Annual Global Tassels Founder&rsquo;s Gala</h2>
-            <p className="date-line">New York &middot; August 1, 2026</p>
+            <h2 style={{ marginTop: 10 }}>13th Annual Global Tassels Founder&rsquo;s Gala</h2>
+            <p className="date-line">The Terra, San Francisco &middot; May 15, 2027</p>
             <p className="lede">
               An evening celebrating education, leadership, and global impact &mdash; and the students, alumni, and
               partners who make it possible.
             </p>
             <div className="gala-actions">
-              <Link className="btn btn-gold" to="/gala#tickets">
-                Purchase Tickets
+              <Link className="btn btn-gold" to="/gala">
+                Gala Details
               </Link>
-              <Link className="btn btn-ghost" to="/gala#tickets">
-                Become a Sponsor
+              <Link className="btn btn-ghost" to="/gala#honorees">
+                2027 Honorees
               </Link>
               <Link className="btn btn-ghost" to="/give#gala-sponsorship">
                 Support the Gala
@@ -392,10 +375,8 @@ export default function Home() {
             </div>
             <div className="gala-links">
               <Link to="/gala#about">About the Gala</Link>
-              <Link to="/gala#about">About the Gala</Link>
               <Link to="/gala#honorees">Honorees</Link>
-              <Link to="/gala#program">Program</Link>
-              <Link to="/gala#travel">Travel &amp; Hotel</Link>
+              <Link to="/gala#honorees-2026">2026 Honorees</Link>
               <Link to="/gala#past-galas">Past Galas</Link>
               <Link to="/gala#gallery">Gala Gallery</Link>
             </div>
