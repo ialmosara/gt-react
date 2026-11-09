@@ -5,7 +5,10 @@ import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function EcosystemOverview() {
-  useDocumentTitle('Our Ecosystem');
+  useDocumentTitle(
+    'Our Ecosystem',
+    'Global Tassels’ work is organized into three connected entities: GT Academy, the GT Foundation, and the GT Institute for Sustainability & Social Mobility.'
+  );
   return (
     <>
       <PageHero

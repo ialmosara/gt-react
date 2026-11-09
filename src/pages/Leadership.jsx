@@ -12,12 +12,12 @@ const board = [
   { name: 'Dr. Shanté Bassett', title: 'Board Treasurer · Rapha Mind & Body, LLC · Connecticut' },
   { name: 'Mr. Jonathan Santos Ramos', title: 'Board Secretary · Care For the Homeless NYC · New York' },
   { name: 'Dr. Elvin T. Ramos', title: 'Founder & Head of Global Network · De Anza College · California' },
-  { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer · University of Hawaii, Leeward CC · Hawaii' },
+  { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer · University of Hawaii, Leeward CC · Hawaii', photo: '/images/people/jeffrey-acido.jpg' },
   { name: 'Dr. Richard Zalman', title: 'Chair of Commission, GT Foundation · Univ. of the District of Columbia · New Jersey' },
-  { name: 'Dr. Christian Aguiar', title: 'University of the District of Columbia · Washington, DC' },
+  { name: 'Dr. Christian Aguiar', title: 'University of the District of Columbia · Washington, DC', photo: '/images/people/christian-aguiar.jpg' },
   { name: 'Ms. Coco-Nicole Banks', title: 'Advanced Energy United · California' },
   { name: 'Prof. Vivian Bejarin', title: 'De Anza College · California' },
-  { name: 'Ms. Divina Grace Dayrit', title: 'Ernst & Young · Maryland' },
+  { name: 'Ms. Divina Grace Dayrit', title: 'Ernst & Young · Maryland', photo: '/images/people/divina-grace-dayrit.jpg' },
   { name: 'Ms. Nicole Trevena Flores', title: 'Southeastern Community College · Arkansas' },
   { name: 'Prof. Gary Greaves', title: 'CUNY Guttman Community College · New York' },
   { name: 'Ms. Jophrane Ligonde', title: 'NYC Department of Education · New York' },
@@ -26,8 +26,8 @@ const board = [
   { name: 'Ms. Pepper Reed', title: 'United States Tax Court · Washington, DC' },
   { name: 'Ms. Hilda Risi', title: 'Community Leader & Retired Teacher · New Jersey' },
   { name: 'Mr. Map Shen', title: 'Tradeweb · New York' },
-  { name: 'Ms. Carolyn Todd', title: 'LaGuardia Community College, CUNY · New York' },
-  { name: 'Ms. Lauren Tomlinson', title: 'The New School University · New York' },
+  { name: 'Ms. Carolyn Todd', title: 'LaGuardia Community College, CUNY · New York', photo: '/images/people/carolyn-todd.jpg' },
+  { name: 'Ms. Lauren Tomlinson', title: 'The New School University · New York', photo: '/images/people/lauren-tomlinson.jpg' },
 ];
 
 // Leadership is organized by entity: the GT Academy, the GT Institute, and the GT Foundation.
@@ -35,7 +35,7 @@ const units = [
   {
     heading: 'GT Academy — Executive Leadership Team',
     people: [
-      { name: 'Ms. Latosha Baldwin', title: '5th President & CEO · Maryland' },
+      { name: 'Ms. Latosha Baldwin', title: '5th President & CEO · Maryland', photo: '/images/people/latosha-baldwin.jpg' },
       { name: 'Haronid "Yogi" Javier', title: 'Chief Operations Officer' },
       { name: 'Clarissa Palomar', title: 'Social Media Officer' },
       { name: 'Lenora Easter, Esq., J.D.', title: 'Chief Legal Counsel' },
@@ -53,7 +53,7 @@ const units = [
   {
     heading: 'GT Institute for Sustainability & Social Mobility',
     people: [
-      { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer' },
+      { name: 'Dr. Jeffrey Acido', title: 'Executive Director & Chief Institute Officer', photo: '/images/people/jeffrey-acido.jpg' },
       { name: 'Ms. Javette Johnson', title: 'Ambassador' },
       { name: 'Prof. Vivian Bejarin', title: 'Ambassador' },
     ],
@@ -91,7 +91,10 @@ function DocIcon() {
 }
 
 export default function Leadership() {
-  useDocumentTitle('Leadership & Governance');
+  useDocumentTitle(
+    'Leadership & Governance',
+    'Meet the Global Tassels Board of Directors and executive leadership, and see how the organization is governed.'
+  );
   return (
     <>
       <PageHero
@@ -111,7 +114,7 @@ export default function Leadership() {
           <div className="people-grid">
             {board.map((person) => (
               <div className="person-card" key={person.name}>
-                <PhotoPlaceholder aria={`Portrait of ${person.name}, Global Tassels board member`} />
+                <PhotoPlaceholder src={person.photo} aria={`Portrait of ${person.name}, Global Tassels board member`} />
                 <span className="name">{person.name}</span>
                 <span className="role">{person.title}</span>
               </div>
@@ -130,7 +133,7 @@ export default function Leadership() {
               <div className="people-grid cols-3" style={{ maxWidth: 860, margin: '0 auto' }}>
                 {unit.people.map((person) => (
                   <div className="person-card" key={unit.heading + person.name}>
-                    <PhotoPlaceholder aria={`Portrait of ${person.name}, ${person.title.split(' · ')[0]}`} />
+                    <PhotoPlaceholder src={person.photo} aria={`Portrait of ${person.name}, ${person.title.split(' · ')[0]}`} />
                     <span className="name">{person.name}</span>
                     <span className="role">{person.title}</span>
                   </div>
@@ -209,7 +212,7 @@ export default function Leadership() {
               <p>Reach out and we'll point you to the right document or the right person.</p>
             </div>
             <div className="callout-actions">
-              <Link className="btn btn-gold" to="/about">
+              <Link className="btn btn-gold" to="/contact">
                 Contact Us
               </Link>
             </div>

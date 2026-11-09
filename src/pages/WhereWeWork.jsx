@@ -7,7 +7,10 @@ import { countries } from '../data/countries.js';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function WhereWeWork() {
-  useDocumentTitle('Where We Work');
+  useDocumentTitle(
+    'Where We Work',
+    'Global Tassels works in Cambodia, Colombia, India, Jamaica, Kenya, and the Philippines, and is cultivating Turkey, Peru, Sierra Leone, Guatemala, and Thailand.'
+  );
   return (
     <>
       <PageHero

@@ -5,7 +5,10 @@ import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function Institute() {
-  useDocumentTitle('GT Institute');
+  useDocumentTitle(
+    'GT Institute',
+    'The GT Institute for Sustainability & Social Mobility launches in 2027 with the Polytechnic University of the Philippines, advancing education and applied research for adult learners.'
+  );
   return (
     <>
       <PageHero

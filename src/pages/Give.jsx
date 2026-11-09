@@ -29,7 +29,10 @@ function GiveIcon() {
 }
 
 export default function Give() {
-  useDocumentTitle('Give');
+  useDocumentTitle(
+    'Give',
+    'Support Global Tassels’ Student Leaders with a tax-deductible gift: donate with PayPal, join the Founding Donors Circle, or ask about scholarship underwriting.'
+  );
   return (
     <>
       <PageHero

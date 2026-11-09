@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
+import StoryFeature from '../components/StoryFeature.jsx';
 import SectionHead from '../components/SectionHead.jsx';
 import NewsletterForm from '../components/NewsletterForm.jsx';
 import InstagramFeed from '../components/InstagramFeed.jsx';
@@ -27,7 +28,10 @@ const events = [
 ];
 
 export default function NewsEvents() {
-  useDocumentTitle('News & Events');
+  useDocumentTitle(
+    'News & Events',
+    'The latest from Global Tassels: the 13th Annual Founder’s Gala, recruitment visits, annual reports, and upcoming events.'
+  );
   return (
     <>
       <PageHero
@@ -87,34 +91,7 @@ export default function NewsEvents() {
       <section id="stories">
         <div className="wrap">
           <SectionHead center eyebrow="Stories" title="Real people, real change." />
-          <div className="stories-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', maxWidth: 900, margin: '0 auto' }}>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Sokha, a Global Tassels scholarship student in Cambodia" />
-              <p className="kicker">Student Story</p>
-              <h3>Sokha</h3>
-              <p className="place">Cambodia</p>
-              <p className="desc">From scholarship student to community leader.</p>
-            </article>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Jose, a Global Tassels alumnus in Colombia" />
-              <p className="kicker">Alumni Story</p>
-              <h3>Jose</h3>
-              <p className="place">Colombia</p>
-              <p className="desc">Turning opportunity into impact in his community.</p>
-            </article>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Winnie, a Global Tassels alumna in Kenya" />
-              <p className="kicker">Alumni Story</p>
-              <h3>Winnie</h3>
-              <p className="place">Kenya</p>
-              <p className="desc">Using education to transform lives.</p>
-            </article>
-          </div>
-          <div className="stories-foot">
-            <Link className="btn btn-outline" to="/impact#stories">
-              More Stories of Impact &rarr;
-            </Link>
-          </div>
+          <StoryFeature />
         </div>
       </section>
 

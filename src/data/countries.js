@@ -1,112 +1,114 @@
-// Illustrative country data (no published per-country figures exist yet) for the "Where We Work" template.
-// Swap these numbers, names, and stories for the real thing whenever
-// GT staff have them — the CountryPage component doesn't need to change,
-// which is the whole point of building this as a template + data file.
-// Adding a seventh country later (Turkey, Peru, Sierra Leone, Guatemala, Thailand, ...) means
-// adding one more object here.
+// Country data for the "Where We Work" pages. Everything here comes from Global
+// Tassels' own published timeline, events calendar, and 2025 Annual Report —
+// no per-country student, alumni, or partner counts are published, so none are
+// shown. Add a seventh country by adding one more object (the pipeline is
+// Turkey, Peru, Sierra Leone, Guatemala, and Thailand).
+//
+// `timeline` entries are { when, text }, oldest first.
 
 export const countries = [
   {
     slug: 'cambodia',
     name: 'Cambodia',
     summary:
-      'Global Tassels began working in Cambodia by partnering with local schools to identify students with strong academic records and leadership potential but limited access to university.',
-    heroTag: 'Photo — GT students, Cambodia',
-    programs: [
-      'University scholarships for first-generation students',
-      'Leadership development workshops',
-      'English-language and university-readiness tutoring',
-      'Community service placements with local NGOs',
+      'Cambodia is one of Global Tassels’ six active countries. A global recruitment event was held there on March 24, 2026, and nominations have been open.',
+    heroTag: 'Photo — GT Student Leaders, Cambodia',
+    timeline: [
+      { when: 'March 24, 2026', text: 'Global recruitment event held in Cambodia.' },
+      { when: '2026', text: 'Nominations for prospective Student Leaders are open.' },
     ],
-    impact:
-      'Cambodian Global Tassels alumni now work across education, public health, and small-business development in Phnom Penh and their home provinces — several have returned to mentor the newest cohort of scholars.',
-    stories: [{ name: 'Sokha', kicker: 'Student Story', blurb: 'From scholarship student to community leader.' }],
-    gallery: ['Orientation day', 'University campus visit', 'Community service project', 'Graduation ceremony'],
+    gallery: ['Recruitment event', 'Student interviews', 'Community engagement', 'Student Leaders'],
   },
   {
     slug: 'colombia',
     name: 'Colombia',
     summary:
-      'In Colombia, Global Tassels partners with community organizations in and around Bogotá and Medellín to support students pursuing degrees in fields tied to local economic development.',
-    heroTag: 'Photo — GT students, Colombia',
-    programs: [
-      'Merit-based university scholarships',
-      'Mentorship pairing alumni with incoming students',
-      'Entrepreneurship and small-business training',
-      'Annual regional leadership summit',
+      'Colombia was one of Global Tassels’ five pilot countries. The first delegation traveled to Bogotá in October 2014, and the relationship has grown through recruitment, academic partnerships, and community engagement ever since.',
+    heroTag: 'Photo — GT Student Leaders, Colombia',
+    timeline: [
+      { when: 'October 2014', text: 'The first group of Global Tassels team members travels to Colombia.' },
+      { when: 'May 2015', text: 'A second visit to Bogotá kicks off global recruitment of potential students.' },
+      { when: 'March 2016', text: 'A third visit to Bogotá focuses on building academic partnerships.' },
+      { when: 'February 2017', text: 'A community engagement and mission trip takes the team back to Bogotá.' },
+      { when: '2017', text: 'Luz Alcira Granada of Save the Children Colombia receives the Founder’s Leaders Key Award.' },
+      { when: '2026', text: 'Karen Gutiérrez, a Global Tassels Student Leader from Colombia, is the keynote speaker at the 12th Annual Founder’s Gala.' },
     ],
-    impact:
-      'Colombian alumni have gone on to found two community-based nonprofits and a youth mentoring collective that now partners directly with Global Tassels on local programming.',
-    stories: [{ name: 'Jose', kicker: 'Alumni Story', blurb: 'Turning opportunity into impact in his community.' }],
-    gallery: ['Scholarship signing day', 'Leadership summit', 'Alumni mentorship session', 'Community project'],
+    gallery: ['Delegation visit', 'University partnership', 'Community engagement', 'Student Leaders'],
   },
   {
     slug: 'india',
     name: 'India',
     summary:
-      'Global Tassels supports students across several Indian states through partnerships with community-based organizations focused on first-generation college access.',
-    heroTag: 'Photo — GT students, India',
-    programs: [
-      'University and vocational scholarships',
-      'Career-readiness and interview coaching',
-      'Peer mentoring circles',
-      'Community health and literacy volunteer projects',
+      'India was a pilot country, first visited in December 2014. Global Tassels returned to New Delhi to interview students in 2015, and a cultivation visit was planned for March 2026.',
+    heroTag: 'Photo — GT Student Leaders, India',
+    timeline: [
+      { when: 'December 2014', text: 'Global Tassels team members travel to India; the IRS approves the organization’s 501(c)(3) status the same month.' },
+      { when: 'Summer 2015', text: 'A second trip to New Delhi interviews students as part of global recruitment.' },
+      { when: '2015', text: 'Rokas Beresniovas of the State Bank of India is honored at the first Founder’s Gala.' },
+      { when: 'March 2026', text: 'A cultivation visit to India was planned.' },
     ],
-    impact:
-      'Graduates of the program are now working in engineering, public health, and education, with many contributing a portion of their income back into local scholarship funds.',
-    stories: [],
-    gallery: ['Scholar cohort meetup', 'Campus visit', 'Volunteer literacy program', 'Graduation day'],
+    gallery: ['Delegation visit', 'Student interviews', 'Community engagement', 'Student Leaders'],
   },
   {
     slug: 'jamaica',
     name: 'Jamaica',
     summary:
-      'Global Tassels works with secondary schools and community groups across Jamaica to identify students ready for university and support them through to graduation.',
-    heroTag: 'Photo — GT students, Jamaica',
-    programs: [
-      'University scholarships and book stipends',
-      'Summer leadership institute',
-      'Community service requirement and tracking',
-      'Alumni career-mentorship network',
+      'Jamaica held a recruitment visit in the fall of 2026. After a nomination window, a delegation traveled there to interview prospective Student Leaders and meet local partners.',
+    heroTag: 'Photo — GT delegation, Jamaica',
+    timeline: [
+      { when: 'September 15 – October 20, 2026', text: 'Nominations open for prospective Jamaican Student Leaders.' },
+      { when: 'October 30 – November 3, 2026', text: 'The GT Academy delegation interviews candidates, engages local partners, and explores ways to strengthen educational partnerships.' },
+      { when: 'After the visit', text: 'The delegation prepares a Visit Summary Report and presents its top candidates to the Board for final selection.' },
     ],
-    impact:
-      'Jamaican alumni have led youth mentoring initiatives in Kingston and Montego Bay, extending Global Tassels’ reach well beyond its original scholarship cohort.',
-    stories: [],
-    gallery: ['Leadership institute', 'Scholarship ceremony', 'Community service day', 'Alumni gathering'],
+    gallery: ['Delegation visit', 'Student interviews', 'Community engagement', 'Student Leaders'],
   },
   {
     slug: 'kenya',
     name: 'Kenya',
     summary:
-      'Our Kenya program partners with schools and community organizations in Nairobi and surrounding counties to support students with strong academic records and a demonstrated commitment to community service.',
-    heroTag: 'Photo — GT students, Kenya',
-    programs: [
-      'Full and partial university scholarships',
-      'Leadership and public-speaking workshops',
-      'Community health outreach partnerships',
-      'Annual alumni reunion and mentorship day',
+      'Global Tassels first visited Nairobi in August 2015 to begin a community engagement initiative with local orphanages, and the relationship has centered on service and partnership since.',
+    heroTag: 'Photo — GT Student Leaders, Kenya',
+    timeline: [
+      { when: 'August 2015', text: 'An initial visit to Nairobi launches a community engagement initiative with local orphanages.' },
+      { when: 'July 2016', text: 'A Community Engagement Mission Trip to Kenya for Global Tassels volunteers.' },
     ],
-    impact:
-      'Winnie, one of our earliest Kenyan scholars, now works in community health education and returns each year to mentor incoming students through the program.',
-    stories: [{ name: 'Winnie', kicker: 'Alumni Story', blurb: 'Using education to transform lives.' }],
-    gallery: ['Scholar orientation', 'Community health outreach', 'Campus life', 'Alumni reunion day'],
+    gallery: ['Delegation visit', 'Community engagement', 'Orphanage partnership', 'Student Leaders'],
   },
   {
     slug: 'philippines',
     name: 'Philippines',
     summary:
-      'In the Philippines, Global Tassels partners with community organizations across several regions to expand access to university education and to strengthen local nonprofit capacity.',
-    heroTag: 'Photo — GT students, Philippines',
-    programs: [
-      'University scholarships and mentoring',
-      'Community partner capacity-building grants',
-      'Student-led community service projects',
-      'Regional leadership and networking events',
+      'The Philippines was a pilot country, first visited in January 2015, and has hosted recruitment and community projects since. The GT Institute launches in 2027 with the Polytechnic University of the Philippines.',
+    heroTag: 'Photo — GT Student Leaders, Philippines',
+    timeline: [
+      { when: 'January 2015', text: 'Global Tassels travels to Manila for the first time.' },
+      { when: 'Summer 2015', text: 'Manila hosts the first complete round of global recruitment.' },
+      { when: 'June 2018', text: 'A Global Recruitment and Community Engagement visit returns to the Philippines.' },
+      { when: 'April 2019', text: 'The team visits Manila for Project JOI and Project KIN.' },
+      { when: 'March 2026', text: 'A cultivation visit to the Philippines was planned.' },
+      { when: '2027', text: 'The GT Institute for Sustainability & Social Mobility launches in partnership with the Polytechnic University of the Philippines (PUP).' },
     ],
-    impact:
-      'A long-running partnership with a local community organization has grown into one of Global Tassels’ strongest models for pairing scholarships with local capacity-building.',
-    stories: [{ name: 'Bridging Opportunities', kicker: 'Community Partner Story', blurb: 'Partnering for a stronger, brighter future.' }],
-    gallery: ['Partner site visit', 'Scholarship cohort', 'Community project', 'Regional leadership event'],
+    gallery: ['Delegation visit', 'Project JOI', 'Community engagement', 'Student Leaders'],
+  },
+];
+
+// Programs that run across every country (from the original site's program pages).
+export const sharedPrograms = [
+  {
+    name: 'Project AIR — Academia In Reach',
+    desc: 'A leadership and academic development program for service-minded students from disadvantaged communities. Student Leaders receive tuition-free undergraduate education through partner colleges, plus counseling, a support network, career training, and language and cultural preparation. Back home, they complete a two-year service commitment to local anti-poverty initiatives.',
+  },
+  {
+    name: 'Project JOI — Justice & Opportunity Initiative',
+    desc: 'Student Leaders are given the foundation and framework to start a community hub for innovation, open to everyone in their home community and designed around the UN Sustainable Development Goals. Global Tassels supports each project from inception to completion.',
+  },
+  {
+    name: 'LInC — Learning and Innovative Communities',
+    desc: 'Partnerships with local NGOs focused on youth development, educational access, and poverty reduction, combining volunteers, expert advice, resources, and financial assistance.',
+  },
+  {
+    name: 'Mentoring',
+    desc: 'Mentors are selected to help Student Leaders transition to college and develop socially, building a coaching relationship meant to last well beyond graduation.',
   },
 ];
 

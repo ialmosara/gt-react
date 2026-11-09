@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PhotoPlaceholder from '../components/PhotoPlaceholder.jsx';
+import StoryFeature from '../components/StoryFeature.jsx';
 import SectionHead from '../components/SectionHead.jsx';
 import MetricCounter from '../components/MetricCounter.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function Impact() {
-  useDocumentTitle('Our Impact');
+  useDocumentTitle(
+    'Our Impact',
+    'See what Global Tassels has accomplished: 75% of FY2025 expenses invested directly in students, the 360 Community Impact Project, and more.'
+  );
   return (
     <>
       <PageHero
@@ -194,53 +198,7 @@ export default function Impact() {
         <div className="wrap">
           <SectionHead center eyebrow="Real People. Real Change." title="Stories of impact" />
 
-          <div className="stories-grid">
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Sokha, a Global Tassels scholarship student in Cambodia" />
-              <p className="kicker">Student Story</p>
-              <h3>Sokha</h3>
-              <p className="place">Cambodia</p>
-              <p className="desc">From scholarship student to community leader.</p>
-              <Link className="link-arrow" style={{ fontSize: '0.86rem' }} to="/where-we-work/cambodia">
-                Read Sokha&rsquo;s story &rarr;
-              </Link>
-            </article>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Jose, a Global Tassels alumnus in Colombia" />
-              <p className="kicker">Alumni Story</p>
-              <h3>Jose</h3>
-              <p className="place">Colombia</p>
-              <p className="desc">Turning opportunity into impact in his community.</p>
-              <Link className="link-arrow" style={{ fontSize: '0.86rem' }} to="/where-we-work/colombia">
-                Read Jose&rsquo;s story &rarr;
-              </Link>
-            </article>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Portrait of Winnie, a Global Tassels alumna in Kenya" />
-              <p className="kicker">Alumni Story</p>
-              <h3>Winnie</h3>
-              <p className="place">Kenya</p>
-              <p className="desc">Using education to transform lives.</p>
-              <Link className="link-arrow" style={{ fontSize: '0.86rem' }} to="/where-we-work/kenya">
-                Read Winnie&rsquo;s story &rarr;
-              </Link>
-            </article>
-            <article className="story-card">
-              <PhotoPlaceholder aria="Photo of a community partner organization in the Philippines" />
-              <p className="kicker">Community Partner Story</p>
-              <h3>Bridging Opportunities</h3>
-              <p className="place">Philippines</p>
-              <p className="desc">Partnering for a stronger, brighter future.</p>
-              <Link className="link-arrow" style={{ fontSize: '0.86rem' }} to="/where-we-work/philippines">
-                Read their story &rarr;
-              </Link>
-            </article>
-          </div>
-          <div className="stories-foot">
-            <Link className="btn btn-outline" to="/where-we-work">
-              Explore Every Country &rarr;
-            </Link>
-          </div>
+          <StoryFeature />
         </div>
       </section>
 

@@ -36,8 +36,9 @@ export const footerColumns = [
     heading: 'Get Involved',
     links: [
       { label: 'Donate', to: '/give#donate' },
-      { label: 'Volunteer', to: '/give' },
-      { label: 'Partner', to: '/give#corporate' },
+      { label: 'Mentor', to: '/get-involved#mentoring' },
+      { label: 'Volunteer', to: '/get-involved#volunteer' },
+      { label: 'Partner', to: '/get-involved#partners' },
       { label: 'Gala', to: '/gala' },
       { label: 'Corporate Partnerships', to: '/give#corporate' },
     ],
@@ -49,7 +50,7 @@ export const footerColumns = [
       { label: 'Annual Reports', to: '/leadership#governance' },
       { label: 'Publications', to: '/news#publications' },
       { label: 'Governance', to: '/leadership#governance' },
-      { label: 'Contact', to: '/about' },
+      { label: 'Contact', to: '/contact' },
     ],
   },
 ];

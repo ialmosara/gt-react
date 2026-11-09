@@ -64,7 +64,10 @@ const tirca = [
 const statusLabel = { open: 'Open', closed: 'Closed', soon: 'Opens soon' };
 
 export default function Recruitment() {
-  useDocumentTitle('Recruitment & Nominations');
+  useDocumentTitle(
+    'Recruitment & Nominations',
+    'How Global Tassels selects Student Leaders: the five-stage recruitment process, the TIRCA assessment, and which countries are open for nominations.'
+  );
   const now = new Date();
   const windows = nominationWindows
     .map((w) => ({ ...w, state: windowStatus(w, now), dates: windowDates(w) }))

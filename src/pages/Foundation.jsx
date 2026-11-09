@@ -5,7 +5,10 @@ import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function Foundation() {
-  useDocumentTitle('GT Foundation');
+  useDocumentTitle(
+    'GT Foundation',
+    'The GT Foundation Engagement Commission is Global Tassels’ primary fundraising body, building support through annual giving, events, corporate partnerships, grants, and major gifts.'
+  );
   return (
     <>
       <PageHero

@@ -8,10 +8,7 @@ export default function Footer() {
         <div className="footer-brand">
           <Link className="brand" to="/">
             <span className="brand-mark" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 3L2 8l10 5 8-4.2V15h2V8L12 3z" fill="currentColor" />
-                <path d="M6 12.2V16c0 2 2.7 4 6 4s6-2 6-4v-3.8l-6 3-6-3z" fill="currentColor" opacity="0.7" />
-              </svg>
+              <img src="/images/brand/signet-76.png" alt="" width="30" height="30" />
             </span>
             <span className="brand-name">Global Tassels</span>
           </Link>
@@ -63,9 +60,8 @@ export default function Footer() {
           </a>
         </div>
         <div className="legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Terms of Use</a>
+          <Link to="/terms#privacy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Use</Link>
         </div>
       </div>
     </footer>

@@ -50,6 +50,7 @@ src/
     recruitment.js         Per-country nomination windows — edit as windows open/close
     payments.js            The PayPal donate link — see Accepting payments, below
     news.js                News items shown on Home and News & Events
+    terms.js               Terms of Use & Privacy Policy text, carried over from the original site
   pages/
     Home.jsx
     About.jsx
@@ -57,6 +58,7 @@ src/
     WhereWeWork.jsx, CountryPage.jsx   (CountryPage is one template driven by data/countries.js)
     Leadership.jsx
     Impact.jsx, NewsEvents.jsx, Gala.jsx, Give.jsx, Recruitment.jsx
+    GetInvolved.jsx, Contact.jsx, Terms.jsx
     NotFound.jsx
 
 netlify/functions/
@@ -85,6 +87,9 @@ Events, Gala, Give) are each one page with an `id`-tagged section per blueprint 
 | News & Events | `/news` | `#news`, `#events`, `#stories`, `#publications`, `#media` |
 | Gala | `/gala` | `#about`, `#tickets`, `#honorees`, `#honorees-2026`, `#gallery`, `#past-galas` |
 | Recruitment & Nominations | `/recruitment` | `#process`, `#windows`, `#criteria`, `#nominate`, `#programs` |
+| Get Involved | `/get-involved` | `#volunteer`, `#mentoring`, `#linc`, `#partners`, `#runner` |
+| Contact | `/contact` | — |
+| Terms & Privacy | `/terms` | `#privacy` |
 | Give | `/give` | `#donate`, `#sponsor-student`, `#corporate`, `#academy`, `#institute`, `#gala-sponsorship` |
 
 The homepage keeps its own teaser versions of Impact, Gala, and Give (per the blueprint's 10-section homepage
@@ -232,6 +237,17 @@ is a reasonable next step once this is live (it needs a repo-scoped personal acc
 update its own secret, which is worth adding deliberately rather than by default).
 
 **Trying it locally:** `INSTAGRAM_ACCESS_TOKEN=xxxx npm run sync:instagram`
+
+## SEO
+
+`hooks/useDocumentTitle.js` sets each page's title, meta description, and Open Graph tags. `public/sitemap.xml` and
+`public/robots.txt` assume the final domain is **https://globaltassels.org** — update both (and the `og:image` /
+`og:url` tags in `index.html`) if the site launches on a different address.
+
+## Legal pages
+
+`/terms` is the Terms of Use and Privacy Policy carried over **verbatim from the original site (last updated
+December 11, 2014)**. It predates the newsletter, PayPal, and nomination forms, so have it reviewed before launch.
 
 ## Adding a seventh country
 

@@ -6,7 +6,10 @@ import MetricCounter from '../components/MetricCounter.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 export default function Academy() {
-  useDocumentTitle('GT Academy');
+  useDocumentTitle(
+    'GT Academy',
+    'GT Academy provides full scholarships, leadership development, and career preparation to talented, economically disadvantaged students from developing countries.'
+  );
   return (
     <>
       <PageHero

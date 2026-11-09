@@ -1220,7 +1220,10 @@ footer.site-footer {
   color: #fff;
 }
 .footer-brand .brand-mark {
-  background: rgba(255, 255, 255, 0.12);
+  background: #fff;
+}
+.footer-brand .brand-mark img {
+  display: block;
 }
 .footer-brand p {
   font-size: 0.9rem;

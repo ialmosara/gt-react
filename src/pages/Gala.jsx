@@ -78,7 +78,10 @@ const pricing2026 = [
 ];
 
 export default function Gala() {
-  useDocumentTitle("Founder's Gala");
+  useDocumentTitle(
+    "Founder's Gala",
+    'The 13th Annual Global Tassels Founder’s Gala — Saturday, May 15, 2027 at The Terra, San Francisco. Honorees, past galas, and how to get involved.'
+  );
   return (
     <>
       <PageHero

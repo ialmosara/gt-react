@@ -36,7 +36,10 @@ const history = [
 ];
 
 export default function About() {
-  useDocumentTitle('About');
+  useDocumentTitle(
+    'About',
+    'Founded in 2014 by Dr. Elvin T. Ramos, Global Tassels is a US-based 501(c)(3) that educates and mobilizes young leaders to fight poverty. Read our mission, history, and 2026–2030 strategic plan.'
+  );
   return (
     <>
       <PageHero
