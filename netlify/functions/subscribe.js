@@ -1,76 +1,76 @@
-// Netlify Function: POST { email } -> adds the address to a Mailchimp audience.
+// Netlify Function: POST { email } -> adds the address to Kit (formerly ConvertKit).
 //
-// Requires three environment variables, set in the Netlify dashboard
+// Environment variables, set in the Netlify dashboard
 // (Site configuration > Environment variables) — never commit these:
-//   MAILCHIMP_API_KEY        e.g. "abc123def456...-us21"  (the "-us21" suffix IS the server prefix)
-//   MAILCHIMP_SERVER_PREFIX  e.g. "us21" (the part after the dash in the API key)
-//   MAILCHIMP_LIST_ID        the Audience/List ID from Mailchimp's Audience settings
+//   KIT_API_KEY   a Kit v4 API key (Kit > Account settings > Developer > "Add a new key")
+//   KIT_FORM_ID   optional; the numeric ID of the Kit form the signups should join.
+//                 If set, the form's own settings (e.g. confirmation email) apply.
 //
-// Mailchimp docs: https://mailchimp.com/developer/marketing/api/list-members/add-or-update-list-member/
+// Kit API docs: https://developers.kit.com/api-reference/subscribers/create-a-subscriber
 //
-// Uses PUT + an MD5 hash of the lowercased email as the member's resource ID.
-// That makes this endpoint idempotent — re-subscribing an existing address
-// just updates their status to "subscribed" instead of erroring.
+// Step 1 creates the subscriber. Kit documents this endpoint as an upsert, so
+// re-subscribing an existing address returns 200 rather than an error.
+// Step 2 (only if KIT_FORM_ID is set) adds them to the form; also 200 if already there.
 
-import crypto from 'node:crypto';
+const KIT_API = 'https://api.kit.com/v4';
+
+const json = (statusCode, body) => ({ statusCode, body: JSON.stringify(body) });
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
+    return json(405, { error: 'Method not allowed' });
   }
 
-  const { MAILCHIMP_API_KEY, MAILCHIMP_SERVER_PREFIX, MAILCHIMP_LIST_ID } = process.env;
-  if (!MAILCHIMP_API_KEY || !MAILCHIMP_SERVER_PREFIX || !MAILCHIMP_LIST_ID) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Newsletter signup is not configured yet.' }),
-    };
+  const { KIT_API_KEY, KIT_FORM_ID } = process.env;
+  if (!KIT_API_KEY) {
+    return json(500, { error: 'Newsletter signup is not configured yet.' });
   }
 
   let email;
   try {
     ({ email } = JSON.parse(event.body || '{}'));
   } catch {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request body.' }) };
+    return json(400, { error: 'Invalid request body.' });
   }
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Please enter a valid email address.' }) };
+  const normalized = typeof email === 'string' ? email.trim().toLowerCase() : '';
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
+    return json(400, { error: 'Please enter a valid email address.' });
   }
-
-  const normalized = email.trim().toLowerCase();
-  const memberHash = crypto.createHash('md5').update(normalized).digest('hex');
-  const url = `https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/${memberHash}`;
+  const headers = { 'Content-Type': 'application/json', 'X-Kit-Api-Key': KIT_API_KEY };
 
   try {
-    const res = await fetch(url, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Basic ${Buffer.from(`anystring:${MAILCHIMP_API_KEY}`).toString('base64')}`,
-      },
-      body: JSON.stringify({
-        email_address: normalized,
-        status_if_new: 'subscribed',
-        status: 'subscribed',
-      }),
+    const created = await fetch(`${KIT_API}/subscribers`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ email_address: normalized }),
     });
 
-    const data = await res.json().catch(() => ({}));
-
-    if (!res.ok) {
-      // "Member Exists" with status already subscribed isn't really an error for us.
-      if (data.title === 'Member Exists') {
-        return { statusCode: 200, body: JSON.stringify({ ok: true }) };
+    if (!created.ok) {
+      const data = await created.json().catch(() => ({}));
+      if (created.status === 422) {
+        return json(400, { error: 'Please enter a valid email address.' });
       }
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: data.detail || 'Could not subscribe that address.' }),
-      };
+      console.error('Kit create subscriber failed', created.status, data);
+      return json(502, { error: 'Could not subscribe that address right now.' });
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true }) };
+    if (KIT_FORM_ID) {
+      const added = await fetch(`${KIT_API}/forms/${encodeURIComponent(KIT_FORM_ID)}/subscribers`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ email_address: normalized }),
+      });
+      if (!added.ok) {
+        const data = await added.json().catch(() => ({}));
+        console.error('Kit add-to-form failed', added.status, data);
+        return json(502, { error: 'Could not subscribe that address right now.' });
+      }
+    }
+
+    return json(200, { ok: true });
   } catch (err) {
-    return { statusCode: 502, body: JSON.stringify({ error: 'Could not reach the mailing list right now.' }) };
+    console.error('Kit request failed', err);
+    return json(502, { error: 'Could not reach the mailing list right now.' });
   }
 };

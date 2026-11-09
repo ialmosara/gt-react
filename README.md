@@ -182,35 +182,37 @@ site doesn't link to them.
 ## Email list (newsletter signups)
 
 The "Stay connected" form on Home and News & Events (`components/NewsletterForm.jsx`) posts to a Netlify
-Function (`netlify/functions/subscribe.js`) that adds the address to a Mailchimp audience. No subscription of
-its own — it's free on both sides (Netlify Functions' free tier, Mailchimp's free tier up to ~500 contacts).
+Function (`netlify/functions/subscribe.js`) that adds the address to a [Kit](https://kit.com) (formerly
+ConvertKit) account. No subscription of its own — Netlify Functions' free tier plus Kit's free plan (as of
+Nov 2026: up to 10,000 subscribers, Kit branding on emails; confirm current terms at kit.com/pricing).
 
 **Status:** the signup boxes currently show "Email us to join" because the newsletter isn't connected yet. After the
-setup below, set `enabled: true` in `src/data/newsletter.js` to switch on the real form. (The sending tool is the
-communications team's decision; only `netlify/functions/subscribe.js` is provider-specific.)
+setup below, set `enabled: true` in `src/data/newsletter.js` to switch on the real form.
 
 **One-time setup:**
 
-1. Create a free [Mailchimp](https://mailchimp.com) account and an Audience (List) for the site.
-2. Get your **API key**: Account → Extras → API keys. It looks like `abc123...def-us21` — the `us21` part
-   after the dash is your **server prefix**.
-3. Get your **Audience/List ID**: Audience → Settings → Audience name and defaults.
-4. Deploy this site to Netlify (connects automatically via `netlify.toml`, which also sets the SPA fallback
-   redirect the site needs).
-5. In the Netlify dashboard: Site configuration → Environment variables, add:
-   - `MAILCHIMP_API_KEY`
-   - `MAILCHIMP_SERVER_PREFIX` (e.g. `us21`)
-   - `MAILCHIMP_LIST_ID`
-6. Redeploy. The form now works — submissions are idempotent (resubscribing an existing address just updates
-   their status, it won't error).
+1. Create a free [Kit](https://kit.com) account (use an organization email so the account can stay with
+   Global Tassels).
+2. Create a **Form** (Grow → Landing Pages & Forms) for the site. Note its numeric ID from the form's URL.
+   In the form's settings, decide whether new subscribers get a confirmation email (double opt-in).
+3. Create an **API key**: Account settings → Developer → "Add a new key" (v4). Copy it immediately; Kit won't
+   show it again.
+4. In the Netlify dashboard: Site configuration → Environment variables, add:
+   - `KIT_API_KEY`
+   - `KIT_FORM_ID` (optional but recommended, so signups land in that form)
+5. Redeploy, then set `enabled: true` in `src/data/newsletter.js` and push.
 
-**Local testing:** copy `.env.example` to `.env`, fill in the three values, then run `netlify dev` (via the
+Resubscribing an existing address doesn't error — Kit's create-subscriber endpoint is an upsert.
+Not yet verified against a live Kit account: that the free plan allows API keys, and how the form's
+confirmation-email setting interacts with API-added subscribers. Test with your own address after setup.
+
+**Local testing:** copy `.env.example` to `.env`, fill in the values, then run `netlify dev` (via the
 [Netlify CLI](https://docs.netlify.com/cli/get-started/)) instead of `npm run dev` — that serves the function
 locally too. Plain `npm run dev` will show the form's built-in error state when it hits the missing endpoint,
 which is expected.
 
-**Switching providers:** everything Mailchimp-specific lives in `netlify/functions/subscribe.js` — swapping to
-Buttondown, ConvertKit, etc. only means rewriting that one file's API call.
+**Switching providers:** everything provider-specific lives in `netlify/functions/subscribe.js` — swapping to
+Mailchimp, Buttondown, etc. only means rewriting that one file's API call.
 
 ## Instagram photo sync
 
@@ -268,6 +270,6 @@ to needs to serve `index.html` for *any* path, not just `/` — otherwise a dire
 
 **Netlify is the assumed target** (`netlify.toml` is already set up with the build command, the SPA fallback
 redirect, and the Functions directory the newsletter form needs) — connect the repo at
-[app.netlify.com](https://app.netlify.com) and it should just work once the Mailchimp environment variables are
+[app.netlify.com](https://app.netlify.com) and it should just work once the Kit environment variables are
 set (see Email list, above). Vercel and most other static hosts work too, but you'd need Vercel's own Functions
 setup instead of `netlify/functions/`, and their own SPA-fallback config in place of `netlify.toml`'s redirect.

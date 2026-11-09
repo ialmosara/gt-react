@@ -4,7 +4,7 @@ import { newsletter } from '../data/newsletter.js';
 /**
  * The "Stay connected" email signup used on Home and News & Events.
  * Posts to a Netlify Function (/.netlify/functions/subscribe) which adds the
- * address to the Mailchimp list configured via environment variables — see
+ * address to the Kit (ConvertKit) account configured via environment variables — see
  * netlify/functions/subscribe.js and the README's "Email list" section.
  */
 export default function NewsletterForm({ idSuffix = '' }) {
