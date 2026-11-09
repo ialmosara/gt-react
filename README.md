@@ -185,6 +185,10 @@ The "Stay connected" form on Home and News & Events (`components/NewsletterForm.
 Function (`netlify/functions/subscribe.js`) that adds the address to a Mailchimp audience. No subscription of
 its own — it's free on both sides (Netlify Functions' free tier, Mailchimp's free tier up to ~500 contacts).
 
+**Status:** the signup boxes currently show "Email us to join" because the newsletter isn't connected yet. After the
+setup below, set `enabled: true` in `src/data/newsletter.js` to switch on the real form. (The sending tool is the
+communications team's decision; only `netlify/functions/subscribe.js` is provider-specific.)
+
 **One-time setup:**
 
 1. Create a free [Mailchimp](https://mailchimp.com) account and an Audience (List) for the site.

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { newsletter } from '../data/newsletter.js';
 
 /**
  * The "Stay connected" email signup used on Home and News & Events.
@@ -32,6 +33,22 @@ export default function NewsletterForm({ idSuffix = '' }) {
       setStatus('error');
       setMessage(err.message || 'Something went wrong. Please try again.');
     }
+  }
+
+  if (!newsletter.enabled) {
+    return (
+      <div className="nl-form" style={{ alignItems: 'center' }}>
+        <p style={{ margin: 0, color: 'var(--ink-soft)', fontSize: '0.95rem' }}>
+          Our email newsletter is coming soon. Want to be on the list?
+        </p>
+        <a
+          className="btn btn-primary"
+          href={`mailto:${newsletter.contactEmail}?subject=${encodeURIComponent('Add me to the newsletter')}`}
+        >
+          Email us to join
+        </a>
+      </div>
+    );
   }
 
   return (
