@@ -186,8 +186,7 @@ Function (`netlify/functions/subscribe.js`) that adds the address to a [Kit](htt
 ConvertKit) account. No subscription of its own — Netlify Functions' free tier plus Kit's free plan (as of
 Nov 2026: up to 10,000 subscribers, Kit branding on emails; confirm current terms at kit.com/pricing).
 
-**Status:** the signup boxes currently show "Email us to join" because the newsletter isn't connected yet. After the
-setup below, set `enabled: true` in `src/data/newsletter.js` to switch on the real form.
+**Status:** live as of Nov 10, 2026 (`enabled: true` in `src/data/newsletter.js`). Kit form ID `10166217` ("Website newsletter signup"), on Kit's Free plan; confirmation email (double opt-in) is on. Set `enabled: false` to fall back to the "Email us to join" prompt.
 
 **One-time setup:**
 
@@ -200,7 +199,7 @@ setup below, set `enabled: true` in `src/data/newsletter.js` to switch on the re
 4. In the Netlify dashboard: Site configuration → Environment variables, add:
    - `KIT_API_KEY`
    - `KIT_FORM_ID` (optional but recommended, so signups land in that form)
-5. Redeploy, then set `enabled: true` in `src/data/newsletter.js` and push.
+5. Redeploy, then set `enabled: true` in `src/data/newsletter.js` and push. (Done.)
 
 Resubscribing an existing address doesn't error — Kit's create-subscriber endpoint is an upsert.
 Not yet verified against a live Kit account: that the free plan allows API keys, and how the form's

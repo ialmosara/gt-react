@@ -1,8 +1,7 @@
-// Flip `enabled` to true once the newsletter service is connected (see the
-// README's "Email list" section — the Kit variables must be set in
-// Netlify first). While false, the signup boxes ask people to email instead of
-// showing a form that can't work yet.
+// Kit is connected (KIT_API_KEY / KIT_FORM_ID set in Netlify). Set `enabled`
+// to false to fall back to an "email us to join" prompt, e.g. if the key is
+// revoked. See the README's "Email list" section.
 export const newsletter = {
-  enabled: false,
+  enabled: true,
   contactEmail: 'info@globaltassels.org',
 };
