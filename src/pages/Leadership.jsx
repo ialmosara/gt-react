@@ -5,8 +5,7 @@ import SectionHead from '../components/SectionHead.jsx';
 import useDocumentTitle from '../hooks/useDocumentTitle.js';
 
 // Board roster effective January 1, 2027, as provided by the founder (Oct 2026).
-// His rule: always show full name, current affiliation, and state. Where an
-// affiliation hasn't been supplied yet, only the state is shown.
+// His rule: always show full name, current affiliation, and state.
 const board = [
   { name: 'Dr. Brian Rothschild', title: 'Chair, Board of Directors · Stevens Institute of Technology · New York' },
   { name: 'Prof. Robin Cook', title: 'Board Vice Chair · University of the District of Columbia · Washington, DC' },
@@ -19,14 +18,14 @@ const board = [
   { name: 'Ms. Coco-Nicole Banks', title: 'Advanced Energy United · California' },
   { name: 'Prof. Vivian Bejarin', title: 'De Anza College · California' },
   { name: 'Ms. Divina Grace Dayrit', title: 'Ernst & Young · Maryland' },
-  { name: 'Ms. Nicole Trevena Flores', title: 'Arkansas' },
+  { name: 'Ms. Nicole Trevena Flores', title: 'Southeastern Community College · Arkansas' },
   { name: 'Prof. Gary Greaves', title: 'CUNY Guttman Community College · New York' },
-  { name: 'Ms. Jophrane Ligonde', title: 'New York' },
+  { name: 'Ms. Jophrane Ligonde', title: 'NYC Department of Education · New York' },
   { name: 'Ms. Nadia Mundle', title: "Mundle's Income Tax & Accounting Services Corp. · New York" },
-  { name: 'Ms. Lydia Nylander', title: 'Maryland' },
-  { name: 'Ms. Pepper Reed', title: 'Washington, DC' },
+  { name: 'Ms. Lydia Nylander', title: 'Amalgamated Bank · Maryland' },
+  { name: 'Ms. Pepper Reed', title: 'United States Tax Court · Washington, DC' },
   { name: 'Ms. Hilda Risi', title: 'Community Leader & Retired Teacher · New Jersey' },
-  { name: 'Mr. Map Shen', title: 'New York' },
+  { name: 'Mr. Map Shen', title: 'Tradeweb · New York' },
   { name: 'Ms. Carolyn Todd', title: 'LaGuardia Community College, CUNY · New York' },
   { name: 'Ms. Lauren Tomlinson', title: 'The New School University · New York' },
 ];

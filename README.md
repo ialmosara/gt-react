@@ -104,8 +104,8 @@ When sources disagree, content follows this order:
    documents above don't cover. Parts of it are stale; a full copy is archived in `content/globaltassels-org/`.
 
 The Strategic Plan names only eight people, so it settles officer *roles*. The full board roster (the 2027
-term — the site launches after January 1, 2027) comes from the founder's email; where he gave only a name and state, the site shows just those
-until an affiliation is supplied.
+term — the site launches after January 1, 2027) comes from the founder's email, with the last five affiliations
+supplied by the founder in Nov 2026.
 
 ## Real content vs. placeholder content
 
