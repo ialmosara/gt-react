@@ -3,8 +3,273 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# ---------------------------------------------------------------------------
+# Redirects from the old WordPress site (globaltassels.org) to the new pages,
+# so existing links, bookmarks and Google results keep working. All permanent
+# (301). Netlify applies rules top to bottom and the first match wins, so these
+# MUST stay above the catch-all at the bottom. A rule matches with or without a
+# trailing slash. Old URLs came from the original site's page list (archived in
+# content/globaltassels-org/pages-index.json).
+# ---------------------------------------------------------------------------
+
+# About (old WordPress site)
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/the-idea"
+  to = "/about#our-story"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/the-mission"
+  to = "/about#mission-vision"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/the-history"
+  to = "/about#history"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/team"
+  to = "/leadership#executive"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/our-governance"
+  to = "/leadership#board"
+  status = 301
+
+
+# Get involved
+[[redirects]]
+  from = "/get-involved/institute"
+  to = "/ecosystem/institute"
+  status = 301
+
+[[redirects]]
+  from = "/get-involved/linc"
+  to = "/get-involved#linc"
+  status = 301
+
+[[redirects]]
+  from = "/get-involved/mentoring-program"
+  to = "/get-involved#mentoring"
+  status = 301
+
+[[redirects]]
+  from = "/get-involved/volunteers"
+  to = "/get-involved#volunteer"
+  status = 301
+
+[[redirects]]
+  from = "/our-partners"
+  to = "/get-involved#partners"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/gt-runner"
+  to = "/get-involved#runner"
+  status = 301
+
+
+# Recruitment and programs
+[[redirects]]
+  from = "/recruitment/our-criteria"
+  to = "/recruitment#criteria"
+  status = 301
+
+[[redirects]]
+  from = "/recruitment/nominations"
+  to = "/recruitment#nominate"
+  status = 301
+
+[[redirects]]
+  from = "/recruitment/global-community-project"
+  to = "/recruitment#programs"
+  status = 301
+
+[[redirects]]
+  from = "/recruitment/project-joi-justice-opportunity-initiative"
+  to = "/recruitment#programs"
+  status = 301
+
+[[redirects]]
+  from = "/countries-gtstudentleaders"
+  to = "/where-we-work"
+  status = 301
+
+
+# Fundraising and gala
+[[redirects]]
+  from = "/fundraising"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/ways-to-give"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/project-see-student-educational-endeavors"
+  to = "/give#sponsor-student"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala"
+  to = "/gala"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/photo-galleries"
+  to = "/gala#gallery"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2015-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2016-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2017-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2018-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2019-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2020-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2021-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2022-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2023-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2024-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+[[redirects]]
+  from = "/fundraising/founders-gala/founders-gala-2025-archive"
+  to = "/gala#past-galas"
+  status = 301
+
+
+# Contact, legal, social
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/follow-us"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/terms-and-conditions"
+  to = "/terms"
+  status = 301
+
+
+# Old WooCommerce store and calendar (gala tickets and events)
+[[redirects]]
+  from = "/shop"
+  to = "/gala#tickets"
+  status = 301
+
+[[redirects]]
+  from = "/shop/*"
+  to = "/gala#tickets"
+  status = 301
+
+[[redirects]]
+  from = "/product/*"
+  to = "/gala#tickets"
+  status = 301
+
+[[redirects]]
+  from = "/product-category/*"
+  to = "/gala#tickets"
+  status = 301
+
+[[redirects]]
+  from = "/cart"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/checkout"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/my-account"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/my-account/*"
+  to = "/give"
+  status = 301
+
+[[redirects]]
+  from = "/events"
+  to = "/news#events"
+  status = 301
+
+[[redirects]]
+  from = "/events/*"
+  to = "/news#events"
+  status = 301
+
+[[redirects]]
+  from = "/event"
+  to = "/news#events"
+  status = 301
+
+[[redirects]]
+  from = "/event/*"
+  to = "/news#events"
+  status = 301
+
 # React Router client-side routes (e.g. /where-we-work/kenya) need to resolve
-# to index.html on a direct load/refresh, not 404.
+# to index.html on a direct load/refresh, not 404. Keep this LAST.
 [[redirects]]
   from = "/*"
   to = "/index.html"
